@@ -20,16 +20,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-
-
     <meta charset="UTF-8">
     <title>Home &mdash; GreaterGood.org : GreaterGood.org</title>
-
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
-
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round"/>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Protecting People, Pets, and the Planet">
@@ -76,81 +71,38 @@
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="https://greatergood.org/"/>
     <meta property="og:site_name" content="Greater Good"/>
-    <meta property="og:image"
-          content="http://greatergood.org/wp-content/uploads/2016/12/15235675_10154392933127639_6836373726370515782_o.jpg"/>
-
-
-    <link rel='stylesheet' id='crp-tc-buttons-css'
-          href='https://greatergood.org/wp-content/plugins/grid-kit-premium/css/crp-tc-buttons.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='crp-font-awesome-css'
-          href='https://greatergood.org/wp-content/plugins/grid-kit-premium/css/fontawesome/font-awesome.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='crp-preloader-css'
-          href='https://greatergood.org/wp-content/plugins/grid-kit-premium/css/crp-preloader.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='sb_instagram_styles-css'
-          href='https://greatergood.org/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.12.2'
-          media='all'/>
-    <link rel='stylesheet' id='sb-font-awesome-css'
-          href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' media='all'/>
-    <link rel='stylesheet' id='bwg_fonts-css'
-          href='https://greatergood.org/wp-content/plugins/photo-gallery/css/bwg-fonts/fonts.css?ver=0.0.1'
-          media='all'/>
-    <link rel='stylesheet' id='sumoselect-css'
-          href='https://greatergood.org/wp-content/plugins/photo-gallery/css/sumoselect.min.css?ver=3.0.3' media='all'/>
-    <link rel='stylesheet' id='mCustomScrollbar-css'
-          href='https://greatergood.org/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.min.css?ver=1.5.35'
-          media='all'/>
-    <link rel='stylesheet' id='bwg_googlefonts-css'
-          href='https://fonts.googleapis.com/css?family=Ubuntu&#038;subset=greek,latin,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic'
-          media='all'/>
-    <link rel='stylesheet' id='bwg_frontend-css'
-          href='https://greatergood.org/wp-content/plugins/photo-gallery/css/styles.min.css?ver=1.5.35' media='all'/>
-    <link rel='stylesheet' id='share-this-share-buttons-sticky-css'
-          href='https://greatergood.org/wp-content/plugins/sharethis-share-buttons/css/mu-style.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='gks-tc-buttons-css'
-          href='https://greatergood.org/wp-content/plugins/yoo-slider/css/gks-tc-buttons.css?ver=5.2.5' media='all'/>
-    <link rel='stylesheet' id='gks-font-awesome-css'
-          href='https://greatergood.org/wp-content/plugins/yoo-slider/css/fontawesome/font-awesome.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='gks-owl-carousel-css'
-          href='https://greatergood.org/wp-content/plugins/yoo-slider/css/viewer/owl-carousel/assets/owl.carousel.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='gks-owl-layout-css'
-          href='https://greatergood.org/wp-content/plugins/yoo-slider/css/viewer/owl-carousel/layout.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='gks-owl-animate-css'
-          href='https://greatergood.org/wp-content/plugins/yoo-slider/css/viewer/owl-carousel/animate.css?ver=5.2.5'
-          media='all'/>
-    <link rel='stylesheet' id='gks-main-front-css'
-          href='https://greatergood.org/wp-content/plugins/yoo-slider/css/gks-main-front.css?ver=5.2.5' media='all'/>
-    <link rel='stylesheet' id='theme-css'
-          href='https://greatergood.org/wp-content/themes/greatergood-theme/src/css/styles.css?ver=1.0' media='all'/>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/themes/greatergood-theme/src/js/scripts.min.js?ver=1.0.0'></script>
+    <meta property="og:image" content="http://greatergood.org/wp-content/uploads/2016/12/15235675_10154392933127639_6836373726370515782_o.jpg"/>
+<!--    <link rel='stylesheet' id='crp-tc-buttons-css'href='https://greatergood.org/wp-content/plugins/grid-kit-premium/css/crp-tc-buttons.css?ver=5.2.5' media='all'/>-->
+<!--    <link rel='stylesheet' id='crp-font-awesome-css'href='https://greatergood.org/wp-content/plugins/grid-kit-premium/css/fontawesome/font-awesome.css?ver=5.2.5' media='all'/>-->
+<!--    <link rel='stylesheet' id='crp-preloader-css'href='https://greatergood.org/wp-content/plugins/grid-kit-premium/css/crp-preloader.css?ver=5.2.5' media='all'/>-->
+    <link rel='stylesheet' id='sb_instagram_styles-css'  href='https://greatergood.org/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.12.2' media='all'/>
+    <link rel='stylesheet' id='sb-font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' media='all'/>
+<!--    <link rel='stylesheet' id='bwg_fonts-css'  href='https://greatergood.org/wp-content/plugins/photo-gallery/css/bwg-fonts/fonts.css?ver=0.0.1' media='all'/>-->
+<!--    <link rel='stylesheet' id='sumoselect-css' href='https://greatergood.org/wp-content/plugins/photo-gallery/css/sumoselect.min.css?ver=3.0.3' media='all'/>-->
+<!--    <link rel='stylesheet' id='mCustomScrollbar-css' href='https://greatergood.org/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.min.css?ver=1.5.35' media='all'/>-->
+    <link rel='stylesheet' id='bwg_googlefonts-css'  href='https://fonts.googleapis.com/css?family=Ubuntu&#038;subset=greek,latin,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic' media='all'/>
+<!--    <link rel='stylesheet' id='bwg_frontend-css'  href='https://greatergood.org/wp-content/plugins/photo-gallery/css/styles.min.css?ver=1.5.35' media='all'/>-->
+<!--    <link rel='stylesheet' id='share-this-share-buttons-sticky-css'  href='https://greatergood.org/wp-content/plugins/sharethis-share-buttons/css/mu-style.css?ver=5.2.5' media='all'/>-->
+<!--    <link rel='stylesheet' id='gks-tc-buttons-css' href='https://greatergood.org/wp-content/plugins/yoo-slider/css/gks-tc-buttons.css?ver=5.2.5' media='all'/>-->
+<!--    <link rel='stylesheet' id='gks-font-awesome-css'  href='https://greatergood.org/wp-content/plugins/yoo-slider/css/fontawesome/font-awesome.css?ver=5.2.5'  media='all'/>-->
+<!--    <link rel='stylesheet' id='gks-owl-carousel-css'   href='https://greatergood.org/wp-content/plugins/yoo-slider/css/viewer/owl-carousel/assets/owl.carousel.css?ver=5.2.5' media='all'/>-->
+<!--    <link rel='stylesheet' id='gks-owl-layout-css'   href='https://greatergood.org/wp-content/plugins/yoo-slider/css/viewer/owl-carousel/layout.css?ver=5.2.5' media='all'/>-->
+<!--    <link rel='stylesheet' id='gks-owl-animate-css'  href='https://greatergood.org/wp-content/plugins/yoo-slider/css/viewer/owl-carousel/animate.css?ver=5.2.5'  media='all'/>-->
+<!--    <link rel='stylesheet' id='gks-main-front-css'  href='https://greatergood.org/wp-content/plugins/yoo-slider/css/gks-main-front.css?ver=5.2.5' media='all'/>-->
+    <link rel='stylesheet' id='theme-css'  href='https://greatergood.org/wp-content/themes/greatergood-theme/src/css/styles.css?ver=1.0' media='all'/>
+<!--    <link rel='stylesheet' id='theme-css'  href='https://greatergood.org/wp-content/themes/greatergood-theme/src/css/styles.css?ver=1.0' media='all'/>-->
+    <script type='text/javascript'  src='https://greatergood.org/wp-content/themes/greatergood-theme/src/js/scripts.min.js?ver=1.0.0'></script>
     <script type='text/javascript' src='https://use.fontawesome.com/4b99ea32a0.js?ver=1.0.0'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-main-front.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-helper.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-social.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-preloader.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/froogaloop2.min.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-rater.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.sumoselect.min.js?ver=3.0.3'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.mobile.min.js?ver=1.3.2'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=1.5.35'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.min.js?ver=0.4.1'></script>
+<!--    <script type='text/javascript'  src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-main-front.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-helper.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-social.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-preloader.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/froogaloop2.min.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/grid-kit-premium/js/crp-rater.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.sumoselect.min.js?ver=3.0.3'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.mobile.min.js?ver=1.3.2'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=1.5.35'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.min.js?ver=0.4.1'></script>-->
     <script type='text/javascript'>
         /* <![CDATA[ */
         var bwg_objectsL10n = {
@@ -190,33 +142,22 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/photo-gallery/js/scripts.min.js?ver=1.5.35'></script>
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/photo-gallery/js/scripts.min.js?ver=1.5.35'></script>-->
     <script type='text/javascript'>
         /* <![CDATA[ */
         var wpgmza_google_api_status = {"message": "Enqueued", "code": "ENQUEUED"};
         /* ]]> */
     </script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/wp-google-maps/wpgmza_data.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/yoo-slider/js/gks-main-front.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/yoo-slider/js/gks-helper.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/yoo-slider/js/froogaloop2.min.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/yoo-slider/js/viewer/owl-carousel/owl.carousel.js?ver=5.2.5'></script>
-    <script type='text/javascript'
-            src='https://greatergood.org/wp-content/plugins/yoo-slider/js/gks-user-scripts.js?ver=5.2.5'></script>
+    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/wp-google-maps/wpgmza_data.js?ver=5.2.5'></script>
+<!--    <script type='text/javascript'  src='https://greatergood.org/wp-content/plugins/yoo-slider/js/gks-main-front.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript'  src='https://greatergood.org/wp-content/plugins/yoo-slider/js/gks-helper.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript' src='https://greatergood.org/wp-content/plugins/yoo-slider/js/froogaloop2.min.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript'  src='https://greatergood.org/wp-content/plugins/yoo-slider/js/viewer/owl-carousel/owl.carousel.js?ver=5.2.5'></script>-->
+<!--    <script type='text/javascript'  src='https://greatergood.org/wp-content/plugins/yoo-slider/js/gks-user-scripts.js?ver=5.2.5'></script>-->
     <link rel='https://api.w.org/' href='https://greatergood.org/wp-json/'/>
-    <link rel="alternate" type="application/json+oembed"
-          href="https://greatergood.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgreatergood.org%2F"/>
-    <link rel="alternate" type="text/xml+oembed"
-          href="https://greatergood.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgreatergood.org%2F&#038;format=xml"/>
+    <link rel="alternate" type="application/json+oembed" href="https://greatergood.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgreatergood.org%2F"/>
+    <link rel="alternate" type="text/xml+oembed" href="https://greatergood.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgreatergood.org%2F&#038;format=xml"/>
     <style type="text/css" id="wp-custom-css">
-
-
         .illustration img {
             width: 100%;
             display: block;
