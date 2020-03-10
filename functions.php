@@ -159,3 +159,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/*Require post types*/
+require 'inc/custom-post-type.php';
+
+/* Include CMB2 meta box */
+require 'inc/metabox/init.php';
+require 'inc/metabox/functions.php';
+
+
+/* Include redux framework */
+require 'inc/redux/ReduxCore/framework.php';
+require 'inc/redux/sample/options.php';
+
+
