@@ -171,4 +171,7 @@ require 'inc/metabox/functions.php';
 require 'inc/redux/ReduxCore/framework.php';
 require 'inc/redux/sample/options.php';
 
+// Include Press Template 
+// require 'press-template.php';
+
 
