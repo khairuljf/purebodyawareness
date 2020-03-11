@@ -376,7 +376,7 @@ global $pureopt; ?>
                 </div>
             </div>
 
-            <div id="flex-component-3" class="ui-hero small">
+            <div id="flex-component-3" class="ui-hero small" style="display: none">
 
                 <!-- SEEMS LIKE THIS IS THE STATIC VERSION OF THE HERO... -->
 
@@ -421,6 +421,10 @@ global $pureopt; ?>
 
 
             </div>
+
+            <?php get_template_part( './template-parts/call-to-action' ); ?>
+
+
         </section>
         <!-- /section -->
     </main>
