@@ -12,17 +12,24 @@
 ?>
 
 
+<?php
+
+global $pureopt;
+
+
+?>
+
 <!-- footer -->
 <footer class="footer" role="contentinfo">
     <div class="container foot-container">
         <section class="foot-1 col-sm-4">
             <a href="https://greatergood.org">
-                <div id="foot-logo"></div>
+                <div id="foot-logo" style="background: url('<?php echo  $pureopt['footer-log']['url'] ?>') center center;background-size: contain!important;"></div>
             </a>
-            <p>GreaterGood.org is a registered 501(c)3 public charity. Our Tax ID number is 20-4846675.</p>
-            <a href="https://greatergood.org/donate" class="ui-action-button solid foot-button track-click"
+            <p><?php echo  $pureopt['footer-desc'] ?></p>
+            <a href="<?php echo  $pureopt['footer-donate-link'] ?>" class="ui-action-button solid foot-button track-click"
                data-link-location="footer" data-campaign-title="no campaign">Donate</a>
-            <p class="copyright-hide">Copyright © 2020 | <a href="https://greatergood.org/privacy" class="privacy-link">Privacy</a>
+            <p class="copyright-hide"><?php echo  $pureopt['copyright-text'] ?> | <a href="<?php echo  $pureopt['privacy-link'] ?>" class="privacy-link">Privacy</a>
             </p>
         </section>
         <section class="foot-2 col-sm-5">
@@ -31,42 +38,43 @@
                 </div>
                 <div class="col-xs-6 col-md-4 foot-nav">
                     <h4>Nav</h4>
-                    <ul>
-                        <li id="menu-item-7245"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7245"><a
-                                    href="https://greatergood.org/catalog-2018/">Gift Catalog</a></li>
-                        <li id="menu-item-26"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a
-                                    href="https://greatergood.org/about-us/">About Us</a></li>
-                        <li id="menu-item-25"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a
-                                    href="https://greatergood.org/what-we-do/">What We Do</a></li>
-                        <li id="menu-item-14377"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14377"><a
-                                    href="https://greatergood.org/donate-to-ggo/">Donate</a></li>
-                        <li id="menu-item-14376"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14376"><a
-                                    href="https://greatergood.org/fundraise-for-ggo/">Fundraise</a></li>
-                        <li id="menu-item-56"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a
-                                    href="https://greatergood.org/blog/">Blog</a></li>
-                    </ul>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'menu-2',
+                        'menu_id'        => 'primary-menu',
+                    ) );
+                    ?>
                 </div>
                 <div class="col-xs-6 col-md-4 foot-smedia">
                     <h4>Social</h4>
                     <ul>
-                        <li><a href="https://www.facebook.com/www.GreaterGood.org" target="_blank"><i
+                        <?php
+
+                        if($pureopt['facebook']){ ?>
+                            <li><a href="<?php echo $pureopt['facebook'] ?>" target="_blank"><i
                                         class="fa fa-facebook fa-2" aria-hidden="true"></i>&nbsp;Facebook</a></li>
-                        <li><a href="https://www.instagram.com/greatergoodorg" target="_blank"><i
-                                        class="fa fa-instagram fa-2" aria-hidden="true"></i>&nbsp;Instagram</a></li>
-                        <li><a href="https://www.twitter.com/greatergoodorg" target="_blank"><i
-                                        class="fa fa-twitter fa-2" aria-hidden="true"></i>&nbsp;Twitter</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCwk-A6mohpMlCodB9Sk9TDg" target="_blank"><i
-                                        class="fa fa-youtube-play fa-2" aria-hidden="true"></i>&nbsp;YouTube</a></li>
+                       <?php } ?>
+                        <?php
+                        if($pureopt['instagram']){ ?>
+                        <li><a href="<?php echo $pureopt['instagram'] ?>" target="_blank"><i
+                                    class="fa fa-instagram fa-2" aria-hidden="true"></i>&nbsp;Instagram</a></li>
+                        <?php } ?>
+                        <?php
+                        if($pureopt['twitter']){ ?>
+                        <li><a href="<?php echo $pureopt['twitter'] ?>" target="_blank"><i
+                                    class="fa fa-twitter fa-2" aria-hidden="true"></i>&nbsp;Twitter</a></li>
+                        <?php } ?>
+                        <?php
+                        if($pureopt['youtube']){ ?>
+                        <li><a href="<?php echo $pureopt['youtube'] ?>" target="_blank"><i
+                                    class="fa fa-youtube-play fa-2" aria-hidden="true"></i>&nbsp;YouTube</a></li>
+                        <?php } ?>
+
                     </ul>
                 </div>
             </div>
         </section>
+
         <section class="foot-3 col-sm-3">
             <h4>Contact Us</h4>
             <form id="ajax-contact" method="post" action="/mailer.php">
@@ -77,6 +85,7 @@
             </form>
             <div id="form-messages"></div>
         </section>
+
     </div>
 
     <div class="foot-4-border-bleed"><p>Copyright © 2020 | <a href="https://greatergood.org/privacy"
@@ -84,7 +93,7 @@
     <div class="container foot-container">
         <section class="foot-4 col-sm-12">
             <div class="col-md-1 foot-sub-1">
-                <a href="https://greatergood.org">Greatergood.org</a>
+                <a href="<?php echo site_url() ?>"><?php echo site_url() ?></a>
             </div>
             <div class="col-md-11 foot-sub-2">
 
