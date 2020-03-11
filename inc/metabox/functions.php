@@ -191,7 +191,6 @@ function banner_section() {
         'id'      => 'wiki_test_colorpicker',
         'type'    => 'colorpicker',
         'default' => '#ffffff',
-        'hide' => true,
         'attributes'    => array(
             'data-conditional-id'     => 'banner_overlay',
             'data-conditional-value'  => 1,
@@ -294,14 +293,103 @@ function other_demo_section_for_copy() {
         'desc' => esc_html__( 'Please enter banner title (If available for this page)', 'cmb2' ),
         'id'   => 'demo_field',
         'type' => 'text',
-        // 'repeatable' => true,
-        // 'column' => array(
-        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
-        // 	'position' => 2, // Set as the second column.
-        // );
-        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
     ) );
 
 }
 
 add_action( 'cmb2_admin_init', 'other_demo_section_for_copy' );
+
+function page_cta() {
+    $cmb_demo = new_cmb2_box( array(
+        'id'            => 'cta_section',
+        'title'         => esc_html__( 'Call To Action - Footer Above', 'cmb2' ),
+        'object_types'  => array( 'page' ),
+        'priority'   => 'high',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'Active Call to Action', 'cmb2' ),
+        'id'   => 'cta_active',
+        'type' => 'checkbox'
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'CTA Title', 'cmb2' ),
+        'id'   => 'cta_title',
+        'type' => 'text',
+        'attributes'    => array(
+            'data-conditional-id'     => 'cta_active',
+            'data-conditional-value'  => 1,
+        ),
+    ) );
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'CTA Subtitle', 'cmb2' ),
+        'id'   => 'cta_subtitle',
+        'type' => 'textarea_small',
+        'attributes'    => array(
+            'data-conditional-id'     => 'cta_active',
+            'data-conditional-value'  => 1,
+        ),
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'CTA Button Name', 'cmb2' ),
+        'id'   => 'cta_button_name',
+        'type' => 'text',
+        'attributes'    => array(
+            'data-conditional-id'     => 'cta_active',
+            'data-conditional-value'  => 1,
+        ),
+    ) );
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'Button Link', 'cmb2' ),
+        'id'   => 'cta_button_url',
+        'type' => 'text_url',
+        'attributes'    => array(
+            'data-conditional-id'     => 'cta_active',
+            'data-conditional-value'  => 1,
+        ),
+    ) );
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'CTA Background Image', 'cmb2' ),
+        'id'   => 'cta_bg_img',
+        'type' => 'file',
+        'attributes'    => array(
+            'data-conditional-id'     => 'cta_active',
+            'data-conditional-value'  => 1,
+        ),
+        'options' => array(
+            'url' => true,
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Add Background Image'
+        ),
+        'query_args' => array(
+            'type' => array(
+                    'image/jpeg',
+                'image/png'
+            )
+
+        ),
+        'preview_size' => 'medium',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'Add CTA Overlay', 'cmb2' ),
+        'id'   => 'cta_show_overlay',
+        'type' => 'checkbox'
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => 'CTA Overlay Color',
+        'id'      => 'cta_overlay',
+        'type'    => 'colorpicker',
+        'default' => '#ffffff',
+        'attributes'    => array(
+            'data-conditional-id'     => 'cta_show_overlay',
+            'data-conditional-value'  => 1,
+        ),
+    ) );
+}
+
+add_action( 'cmb2_admin_init', 'page_cta' );

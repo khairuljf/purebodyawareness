@@ -12,7 +12,7 @@
 
 <div class="ui-hero medium">
     <div class="ui-hero-slides -version" data-speed="">
-        <div class="ui-hero-slide  animated center"
+        <div class="ui-hero-slide animated center <?php echo has_post_thumbnail() ? 'has-thumbnail' : 'no-thumbnail';  ?>"
              style="background-image:url('<?php if (has_post_thumbnail()) {
                  the_post_thumbnail_url();
              } ?>');z-index:1;">
