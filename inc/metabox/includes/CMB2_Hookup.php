@@ -312,7 +312,7 @@ class CMB2_Hookup extends CMB2_Hookup_Base {
 			'post.php',
 			'post-new.php',
 			'page-new.php',
-			'page.php',
+			'Front-page-template.php',
 			'comment.php',
 			'edit-tags.php',
 			'term.php',
