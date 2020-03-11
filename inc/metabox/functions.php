@@ -179,6 +179,55 @@ function banner_section() {
         // );
         // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
     ) );
+    $cmb_demo->add_field( array(
+        'name' => esc_html__( 'Banner Overlay', 'cmb2' ),
+        'desc' => esc_html__( 'Do you want overlay?', 'cmb2' ),
+        'id'   => 'banner_overlay',
+        'type' => 'checkbox'
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => 'Test Color Picker',
+        'id'      => 'wiki_test_colorpicker',
+        'type'    => 'colorpicker',
+        'default' => '#ffffff',
+        'hide' => true,
+        'attributes'    => array(
+            'data-conditional-id'     => 'banner_overlay',
+            'data-conditional-value'  => 1,
+        ),
+    ) );
+
+
+    $cmb_demo->add_field( array(
+        'name'          => __( 'Conditional select test:', 'your-text-domain' ),
+        'desc'          => __('some description', 'your-text-domain'),
+        'id'            => 'test_select_id',
+        'type'          => 'select',
+        'options'       => array(
+            'one'    => __('one', 'your-text-domain' ),
+            'two'    => __('two', 'your-text-domain'),
+            'three'  => __('three', 'your-text-domain'),
+        ),
+    ) );
+    // conditional field
+    $cmb_demo->add_field(array(
+        'name'          => __( 'Will show on value two selected', 'your-text-domain' ),
+        'desc'          => __('some description', 'your-text-domain'),
+        'id'            => 'test_select_depend',
+        'type'          => 'select',
+        'options'       => array(
+            'four'   => __('Four', 'your-text-domain'),
+            'five'   => __('Five', 'your-text-domain'),
+            'six'    => __('Six', 'your-text-domain'),
+        ),
+        'attributes'    => array(
+            'data-conditional-id'     => 'test_select_id',
+            'data-conditional-value'  => 'two',
+        ),
+    ) );
+
+
 }
 
 add_action( 'cmb2_admin_init', 'banner_section' );
