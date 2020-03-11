@@ -7,10 +7,12 @@
  * @package purebodyawareness
  */
 
+$addBannerClass = get_post_meta(get_the_ID(), 'addBannerClass', true);
+$isAddBannerClass = $isAddBannerClass ? $isAddBannerClass : '';
 
 ?>
 
-<div class="ui-hero medium">
+<div class="ui-hero medium <?php echo $isAddBannerClass; ?>">
     <div class="ui-hero-slides -version" data-speed="">
         <div class="ui-hero-slide animated center <?php echo has_post_thumbnail() ? 'has-thumbnail' : 'no-thumbnail';  ?>"
              style="background-image:url('<?php if (has_post_thumbnail()) {

@@ -14,15 +14,20 @@ $cta_button_name = get_post_meta(get_the_ID(), 'cta_button_name', true);
 $cta_button_url = get_post_meta(get_the_ID(), 'cta_button_url', true);
 $cta_bg_img = get_post_meta(get_the_ID(), 'cta_bg_img', true);
 $cta_show_overlay = get_post_meta(get_the_ID(), 'cta_show_overlay', true);
-
+$cta_overlay = get_post_meta(get_the_ID(), 'cta_overlay', true);
+$addClass = get_post_meta(get_the_ID(), 'addClass', true);
+$isAddClass = $addClass ? $addClass : '';
 $cta_bg_img ? $cta_bg_img : '';
 
 ?>
 <?php
 if ($cta_active) { ?>
-    <div class="ui-banner center" style="background-image:url(<?php echo $cta_bg_img; ?>);">
-
-        <div class="ui-banner-overlay fx-main-color-background-color-09"></div>
+    <div class="ui-banner center mh360 <?php if(!empty($isAddClass)) {echo $isAddClass;} ?>" style="background-image:url(<?php echo $cta_bg_img; ?>);">
+        <?php //var_dump($cta_overlay); wp_die(); ?>
+        <?php if($cta_show_overlay && $cta_overlay): ?>
+        
+        <div class="ui-banner-overlay fx-main-color-background-color-09" style="background-color: <?php echo $cta_overlay; ?>"></div>
+        <?php endif; ?>
 
         <div class="container">
             <div class="ui-banner-container">
@@ -45,7 +50,7 @@ if ($cta_active) { ?>
                         <div class="ui-banner-content-action-buttons">
                             <div class="ui-banner-content-action-button">
                                 <a href="<?php echo $cta_button_url ?>"
-                                   class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
+                                   class="cta_outline_btn ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
                                    target="_blank">
                                     <?php echo $cta_button_name; ?>
                                 </a>

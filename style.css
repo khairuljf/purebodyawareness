@@ -27,3 +27,199 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .ui-hero-slide.no-thumbnail {
 	background-color: #ddd;
 }
+.cta_outline_btn {
+	background: transparent;
+	border-style: solid;
+	border-width:  2px;
+}
+.ui-banner a {
+	border-color: #fff;
+	color: #fff;
+}
+.ui-banner.fundraise-cta a {
+	border-color: rgba(255,176,0,1);
+	color: #000;
+}
+.ui-banner .ui-banner-content-headline {
+	font-size: 54px;
+	line-height: 60px;
+}
+.ui-banner.fundraise-cta .ui-banner-content-headline {
+	font-size: 190%;
+}
+.ui-banner .ui-banner-content-paragraph {
+	font-size: 30px;
+	line-height: 45px;
+}.ui-banner.fundraise-cta  .ui-banner-content-paragraph {
+	 font-size: 100%;
+ }
+.ui-banner.mh360 {
+	min-height: 360px;
+}
+.ui-banner.mh360.fundraise-cta {
+	min-height: 250px;
+}
+
+
+.illustration img {
+	width: 100%;
+	display: block;
+}
+
+
+ .fx-highlight-1-color-background-color-10 {
+	 background-color:rgba(255,176,0,1);
+	 color:#000;
+ }
+.ui-action-button.outline.fx-highlight-1-color-background-color-10 {
+	background-color: rgba(0,0,0,0);
+	color:#ffb000;
+}
+.ui-action-button.white-outline.fx-highlight-1-color-background-color-10 {
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border-color: white;
+}
+
+.ui-team-panel-expander.fx-main-color-background-color-10 .expander-content-container .expander-content-left-summary,
+.ui-team-panel-expander.fx-main-color-background-color-10 .expander-content-container .expander-content-summary {
+	color:#000;
+}
+.ui-team-panel-expander.fx-highlight-1-color-background-color-10 .expander-content-arrow {
+	border-bottom:10px solid rgba(255,176,0,1);
+}
+
+.ui-team-panel-expander.fx-main-color-background-color-10 .expander-content-container .expander-content-left-summary,
+.ui-team-panel-expander.fx-main-color-background-color-10 .expander-content-container .expander-content-summary {
+	color:#fff;
+}
+.ui-team-panel-expander.fx-main-color-background-color-10 .expander-content-arrow {
+	border-bottom:10px solid rgba(0,151,206,1);
+}
+
+.fx-highlight-1-color-background-color-09 {
+	background-color:rgba(255,176,0,0.9);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-08 {
+	background-color:rgba(255,176,0,0.8);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-07 {
+	background-color:rgba(255,176,0,0.7);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-06 {
+	background-color:rgba(255,176,0,0.6);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-05 {
+	background-color:rgba(255,176,0,0.5);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-04 {
+	background-color:rgba(255,176,0,0.4);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-03 {
+	background-color:rgba(255,176,0,0.03);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-02 {
+	background-color:rgba(255,176,0,0.2);
+	color:#000;
+}
+
+.fx-highlight-1-color-background-color-01 {
+	background-color:rgba(255,176,0,0.1);
+	color:#000;
+}
+
+.fx-highlight-1-color-border-color {
+	border-color:rgba(255,176,0,1);
+}
+
+.fx-highlight-1-color-text {
+	color:rgba(255,176,0,1) !important;
+}
+
+.fx-main-color-background-color-10 {
+	background-color:rgba(0,151,206,1);
+	color:#fff;
+}
+.ui-action-button.white-outline.fx-main-color-background-color-10 {
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border-color: white;
+}
+
+.fx-main-color-background-color-09 {
+	background-color:rgba(0,151,206,0.9);
+	color:#fff;
+}
+
+.fx-main-color-background-color-08 {
+	background-color:rgba(0,151,206,0.8);
+	color:#fff;
+}
+
+.fx-main-color-background-color-07 {
+	background-color:rgba(0,151,206,0.7);
+	color:#fff;
+}
+
+.fx-main-color-background-color-06 {
+	background-color:rgba(0,151,206,0.6);
+	color:#fff;
+}
+
+.fx-main-color-background-color-05 {
+	background-color:rgba(0,151,206,0.5);
+	color:#fff;
+}
+
+.fx-main-color-background-color-04 {
+	background-color:rgba(0,151,206,0.4);
+	color:#fff;
+}
+
+.fx-main-color-background-color-03 {
+	background-color:rgba(0,151,206,0.3);
+	color:#fff;
+}
+
+.fx-main-color-background-color-02 {
+	background-color:rgba(0,151,206,0.2);
+	color:#fff;
+}
+
+.fx-main-color-background-color-01 {
+	background-color:rgba(0,151,206,0.1);
+	color:#fff;
+}
+
+.fx-main-color-border-color {
+	border-color:rgba(0,151,206,1);
+}
+
+.fx-main-color-text {
+	color:rgba(0,151,206,1);
+}
+
+.gform_button{
+	background-color: rgba(255,176,0,1);
+	color: white;
+	font-weight: 500;
+}
+@media only screen and (max-width: 767px) {
+	figure.alignleft, img.alignleft, figure.alignright, img.alignright {
+		float:none;
+	}
+}
