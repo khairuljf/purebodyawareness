@@ -20,17 +20,36 @@ get_header();
 ?>
 
 
+<?php
+$bannerTitle = get_post_meta(get_the_ID(), 'banner_title', true);
+$pageTitle   = get_the_title();
+$bannerTitle ? $bannerTitle : $pageTitle;
+$bannerSubTitle   = get_post_meta(get_the_ID(), 'banner_subtitle', true);
+$bannerButtonName = get_post_meta(get_the_ID(), 'banner_button_name', true);
 
+if (empty($bannerButtonName)) {
+    $bannerButtonName = 'LEARN MORE';
+}
+$bannerButtonUrl = get_post_meta(get_the_ID(), 'banner_button_url', true);
+
+$banner_image =  get_the_post_thumbnail_url();
+
+
+
+
+?>
     <main role="main">
         <!-- section -->
         <section>
 
             <div id="flex-component-0" class="ui-hero medium">
-
                 <!-- SEEMS LIKE THIS IS THE STATIC VERSION OF THE HERO... -->
-
                 <div class="ui-hero-slides regular-version" data-speed="10000">
-                    <div class="ui-hero-slide  animated center" style="background-image:url('https://greatergood.org/wp-content/uploads/2019/11/ppp-2019-sophie-browndog-giraffe-2-e1573677793833-1500x757.jpg');z-index:1;">
+                    <div class="ui-hero-slide  animated center" style="<?php if($banner_image){ ?>
+                        background-image:url('<?php echo $banner_image ?>');
+                    <?php }else{ ?>
+                        background: #ddd;
+                    <?php } ?>z-index:1;">
 
                         <div class="ui-hero-slide-overlay fx-black-color-background-color-03"></div>
                         <div class="container">
@@ -40,25 +59,26 @@ get_header();
 
 
                                         <div class="ui-hero-slide-content-text">
-                                            <h1 class="ui-hero-slide-content-headline" style="color: #ffffff;">Become a
-                                                Protector</h1>
 
-                                            <p class="ui-hero-slide-content-paragraph" style="color: #ffffff;">
-                                                <strong>Join us in our mission of protecting people, pets, and the
-                                                    planet.</strong></p>
+                                            <h1 class="ui-hero-slide-content-headline"
+                                                style="color: #ffffff;"><?php echo $bannerTitle ?></h1>
+
+                                            <?php if ($bannerSubTitle): ?>
+                                                <p class="ui-hero-slide-content-paragraph" style="color: #ffffff;">
+                                                    <strong><?php echo $bannerSubTitle ?></strong></p>
+                                            <?php endif; ?>
                                         </div>
 
-
-                                        <div class="ui-hero-slide-content-action-buttons">
-                                            <div class="ui-hero-slide-content-action-button">
-                                                <a href="http://bit.ly/37YHSgM"
-                                                   class="ui-action-button white-outline fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Learn More</a>
-
-
+                                        <?php if ($bannerButtonUrl): ?>
+                                            <div class="ui-hero-slide-content-action-buttons">
+                                                <div class="ui-hero-slide-content-action-button">
+                                                    <a href="http://bit.ly/37YHSgM"
+                                                       class="ui-action-button white-outline fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
+                                                       target="_blank"><?php echo $bannerButtonName ?></a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        <?php endif; ?>
+
                                     </div>
 
                                 </div>
@@ -67,22 +87,15 @@ get_header();
                     </div>
 
                 </div>
-
-
-            </div>
-            </div>
-            </div>
-
             </div>
             <!-- This is where the front end gets rendered and stuff... -->
             <div class="ui-flexible-grid-tool">
-                <div
-                        class="flexible-grid-tool-background"
-                        style="background-image: url(https://greatergood.org/wp-content/uploads/2018/11/Huasabasrainbow-CHedgcock-Huasabas-Aug11-2a.jpg); background-attachment: unset;">
+                <div class="flexible-grid-tool-background"  style="background-image: url(https://greatergood.org/wp-content/uploads/2018/11/Huasabasrainbow-CHedgcock-Huasabas-Aug11-2a.jpg); background-attachment: unset;">
 
                     <div class="container">
 
-                        <h1 class="flexible-grid-headline">GreaterGood.org protects people, pets, and the planet. Here's how
+                        <h1 class="flexible-grid-headline">GreaterGood.org protects people, pets, and the planet. Here's
+                            how
                             it works.</h1>
 
                         <div class="flexible-grid-cta-section clearfix">
@@ -95,7 +108,8 @@ get_header();
                                          style="background-image: url(https://greatergood.org/wp-content/uploads/2018/03/KC-Stephen-and-Wesley-High5-BEST-ONE-copy.jpg)">
                                     </div>
                                     <div class="flexible-grid-item-inner regular-inner">
-                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Our Signature
+                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Our
+                                            Signature
                                             Programs</p>
                                         <p class="flexible-grid-item-text" style="color: #ffffff;">We operate a suite of
                                             Signature Programs staffed by experts in their fields.</p>
@@ -113,13 +127,16 @@ get_header();
                                         <div class="flexible-grid-item-rollover-content">
                                             <p class="flexible-grid-item-text title-text rollover-text"
                                                style="color: #ffffff;">Our focus on impact</p>
-                                            <p class="flexible-grid-item-text rollover-text" style="color: #ffffff;">Whether
+                                            <p class="flexible-grid-item-text rollover-text" style="color: #ffffff;">
+                                                Whether
                                                 we’re funding a meaningful project around the globe or on the frontlines
-                                                with our Signature Programs, our focus is on impact. We want to make sure
+                                                with our Signature Programs, our focus is on impact. We want to make
+                                                sure
                                                 when you give, you give where it matters.</p>
                                             <a href="https://greatergood.org/our-impact/"
                                                class="ui-action-button flexible-grid-item-button rollover-button"
-                                               data-product="" style="background-color: #ffb000; color: #000">Learn More</a>
+                                               data-product="" style="background-color: #ffb000; color: #000">Learn
+                                                More</a>
                                         </div>
 
                                         <div class="flexible-grid-item-overlay opacity-40"
@@ -127,11 +144,14 @@ get_header();
 
                                     </div>
                                     <div class="flexible-grid-item-inner rollover-mobile">
-                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Our focus on
+                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Our focus
+                                            on
                                             impact</p>
-                                        <p class="flexible-grid-item-text" style="color: #ffffff;">Whether we’re funding a
+                                        <p class="flexible-grid-item-text" style="color: #ffffff;">Whether we’re funding
+                                            a
                                             meaningful project around the globe or on the frontlines with our Signature
-                                            Programs, our focus is on impact. We want to make sure when you give, you give
+                                            Programs, our focus is on impact. We want to make sure when you give, you
+                                            give
                                             where it matters.</p>
                                         <a href="https://greatergood.org/our-impact/"
                                            class="ui-action-button flexible-grid-item-button" data-product=""
@@ -145,9 +165,11 @@ get_header();
                                          style="background-image: url(https://greatergood.org/wp-content/uploads/2018/10/worldwaterday_possibly-jhai-coffee-cred.jpg)">
                                     </div>
                                     <div class="flexible-grid-item-inner regular-inner">
-                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Our Gifts of
+                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Our Gifts
+                                            of
                                             Hope</p>
-                                        <p class="flexible-grid-item-text" style="color: #ffffff;">We've funded over 5,000
+                                        <p class="flexible-grid-item-text" style="color: #ffffff;">We've funded over
+                                            5,000
                                             projects around the world. Check out a cause you care about.</p>
                                         <a href="https://greatergood.org/catalog/"
                                            class="ui-action-button flexible-grid-item-button" data-product=""
@@ -189,8 +211,10 @@ get_header();
                                     </div>
                                     <div class="flexible-grid-item-inner regular-inner">
                                         <p class="flexible-grid-item-text title-text" style="color: #000;">Donate</p>
-                                        <p class="flexible-grid-item-text" style="color: #000;">Giving directly to GGO helps
-                                            us fulfill our mission of protecting people, pets, and the planet. Together, we
+                                        <p class="flexible-grid-item-text" style="color: #000;">Giving directly to GGO
+                                            helps
+                                            us fulfill our mission of protecting people, pets, and the planet. Together,
+                                            we
                                             can change the world.</p>
                                         <a href="https://greatergood.org/donate/"
                                            class="ui-action-button flexible-grid-item-button" data-product=""
@@ -204,12 +228,15 @@ get_header();
                                          style="background-image: url(https://greatergood.org/wp-content/uploads/2018/10/The-Fabindia-School-Girl-Students-1.jpg)">
                                     </div>
                                     <div class="flexible-grid-item-inner regular-inner">
-                                        <p class="flexible-grid-item-text title-text" style="color: #000000;">Fundraise for
+                                        <p class="flexible-grid-item-text title-text" style="color: #000000;">Fundraise
+                                            for
                                             GGO</p>
                                         <p class="flexible-grid-item-text" style="color: #000000;">Fundraise as an
-                                            individual or group for a cause you care deeply about. Customize and share your
+                                            individual or group for a cause you care deeply about. Customize and share
+                                            your
                                             own fundraiser page.</p>
-                                        <a href="http://bit.ly/2WTZRQ6" class="ui-action-button flexible-grid-item-button"
+                                        <a href="http://bit.ly/2WTZRQ6"
+                                           class="ui-action-button flexible-grid-item-button"
                                            data-product="26" style="background-color: #ffffff; color: #000">Fundraise
                                             Now</a>
                                     </div>
@@ -221,9 +248,11 @@ get_header();
                                          style="background-image: url(https://greatergood.org/wp-content/uploads/2018/10/dogandhand.jpg)">
                                     </div>
                                     <div class="flexible-grid-item-inner regular-inner">
-                                        <p class="flexible-grid-item-text title-text" style="color: #000000;">Other Ways To
+                                        <p class="flexible-grid-item-text title-text" style="color: #000000;">Other Ways
+                                            To
                                             Give</p>
-                                        <p class="flexible-grid-item-text" style="color: #000000;">Donate your wedding or
+                                        <p class="flexible-grid-item-text" style="color: #000000;">Donate your wedding
+                                            or
                                             birthday, leave a bequest, or make non-standard gifts like stock or in-kind
                                             product donations.</p>
                                         <a href="https://greatergood.org/other-ways-to-give/"
@@ -251,11 +280,13 @@ get_header();
                         <div class="ui-banner-content">
 
                             <div class="ui-banner-content-text">
-                                <h1 class="ui-banner-content-headline">To date, GreaterGood.org has given over $250 million
+                                <h1 class="ui-banner-content-headline">To date, GreaterGood.org has given over $250
+                                    million
                                     in cash and in-kind grants.</h1>
 
                                 <p class="ui-banner-content-paragraph">
-                                    <strong>View our Annual Report</strong> for fiscal years 2017 and 2018 and see all the
+                                    <strong>View our Annual Report</strong> for fiscal years 2017 and 2018 and see all
+                                    the
                                     good we've accomplished thanks to our incredible donors and partners! </p>
                             </div>
 
@@ -322,14 +353,12 @@ get_header();
             <div class="ui-emergency-action" style="background-color:#ffffff">
 
                 <div class="ui-emergency-action-content">
-		<span style="color:#ffffff" class="ui-emergency-action-text">
-			<strong>
-																</strong>
-								</span>
+                    <span style="color:#ffffff" class="ui-emergency-action-text">
+                        <strong></strong>
+					</span>
                     <a href="https://greatergood.org/press/"
                        class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                       target="_blank">
-                        View All our Press Coverage</a>
+                       target="_blank">View All our Press Coverage</a>
 
 
                 </div>
@@ -455,10 +484,13 @@ get_header();
                                          style="background-image: url(https://greatergood.org/wp-content/uploads/2018/10/IMG_0305.jpg)">
                                     </div>
                                     <div class="flexible-grid-item-inner regular-inner">
-                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Interested in
+                                        <p class="flexible-grid-item-text title-text" style="color: #ffffff;">Interested
+                                            in
                                             Partnering with Us?</p>
-                                        <p class="flexible-grid-item-text" style="color: #ffffff;">We want to hear from you!
-                                            Partner with us and connect your brand with an organization that's changing the
+                                        <p class="flexible-grid-item-text" style="color: #ffffff;">We want to hear from
+                                            you!
+                                            Partner with us and connect your brand with an organization that's changing
+                                            the
                                             world.</p>
                                         <a href="https://greatergood.org/partnerships/"
                                            class="ui-action-button flexible-grid-item-button" data-product=""
@@ -478,7 +510,6 @@ get_header();
         </section>
         <!-- /section -->
     </main>
-
 
 
 <?php
