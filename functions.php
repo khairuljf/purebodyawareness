@@ -132,6 +132,13 @@ function purebodyawareness_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'purebodyawareness_scripts' );
 
+
+function purebodyawareness_scripts_admin(){
+    wp_enqueue_script( 'cmb2-conditional', get_template_directory_uri() . '/assets/js/cmb2-conditional-logic.js', array('jquery'), time(), true );
+}
+
+add_action('admin_enqueue_scripts','purebodyawareness_scripts_admin');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -171,7 +178,7 @@ require 'inc/metabox/functions.php';
 require 'inc/redux/ReduxCore/framework.php';
 require 'inc/redux/sample/options.php';
 
-// Include Press Template 
+// Include Press Template
 // require 'press-template.php';
 
 

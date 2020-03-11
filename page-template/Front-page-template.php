@@ -30,12 +30,9 @@ get_header();
                 <!-- SEEMS LIKE THIS IS THE STATIC VERSION OF THE HERO... -->
 
                 <div class="ui-hero-slides regular-version" data-speed="10000">
-                    <div class="ui-hero-slide  animated center"
-                         style="background-image:url('https://greatergood.org/wp-content/uploads/2019/11/ppp-2019-sophie-browndog-giraffe-2-e1573677793833-1500x757.jpg');z-index:1;">
+                    <div class="ui-hero-slide  animated center" style="background-image:url('https://greatergood.org/wp-content/uploads/2019/11/ppp-2019-sophie-browndog-giraffe-2-e1573677793833-1500x757.jpg');z-index:1;">
 
                         <div class="ui-hero-slide-overlay fx-black-color-background-color-03"></div>
-
-
                         <div class="container">
                             <div class="ui-hero-slide-container regular-version center">
                                 <div class="container">
