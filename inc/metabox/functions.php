@@ -233,7 +233,13 @@ function pressReadMore()
         'desc' => esc_html__('Please enter banner title (If available for this page)', 'cmb2'),
         'id' => 'press_read_url',
         'type' => 'text_url',
-    ));
+        // 'repeatable' => true,
+        // 'column' => array(
+        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
+        // 	'position' => 2, // Set as the second column.
+        // );
+        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
+    ) );
 
 }
 
@@ -629,3 +635,6 @@ add_action('cmb2_admin_init', 'partner_accordion');
 
 
 
+
+
+include 'customMeta.php';

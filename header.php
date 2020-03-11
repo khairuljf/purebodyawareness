@@ -333,9 +333,9 @@
 <header class="base-header fx-main-color-background-color-10 clear" role="banner">
     <div class="container-fluid main-nav-dropdown">
         <div class="base-header-logo">
-            <a href="https://greatergood.org">
+
                 <?php the_custom_logo(); ?>
-            </a>
+
         </div>
         <div class="base-header-toggle"></div>
 

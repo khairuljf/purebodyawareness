@@ -21,6 +21,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
+.base-header .base-header-logo a img{
+	height: auto;
+}
+
 .ui-hero-slide-content-action-buttons {
 	margin-top: 15px;
 }
