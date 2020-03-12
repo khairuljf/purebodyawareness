@@ -12,6 +12,7 @@ $post_donate_button_section = get_post_meta(get_the_ID(), 'post_donate_button_se
 $donate_bg = get_post_meta(get_the_ID(), 'donate_bg', true);
 $donate_btn_url = get_post_meta(get_the_ID(), 'donate_btn_url', true);
 $donate_btn = get_post_meta(get_the_ID(), 'donate_btn', true);
+
 $donate_bg_url = $donate_bg ? $donate_bg : '';
 ?>
 <div class="col-md-6">
@@ -36,14 +37,15 @@ $donate_bg_url = $donate_bg ? $donate_bg : '';
                 <h2><?php echo get_the_title(); ?></h2>
 
                 <p class="post-list-item-excerpt"><?php echo get_the_excerpt(); ?></p>
-
                 <?php if ($post_donate_button_section): ?>
 
-                    <div class="wp-block-cover" style="background-image:url('<?php echo esc_url($donate_bg_url); ?>');">
+                    <div class="wp-block-cover "
+                         style="background-image:url('<?php echo esc_url($donate_bg_url); ?>');">
                         <div class="wp-block-cover__inner-container">
                             <div class="wp-block-button aligncenter"><a
                                         class="wp-block-button__link has-background has-vivid-cyan-blue-background-color"
-                                        href="<?php echo esc_url($donate_btn_url); ?>"><?php echo $donate_btn; ?></a></div>
+                                        href="<?php echo esc_url($donate_btn_url); ?>"><?php echo $donate_btn; ?></a>
+                            </div>
                         </div>
                     </div>
 

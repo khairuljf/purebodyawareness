@@ -59,9 +59,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-color: rgba(255,176,0,1);
 	color: #000;
 }
-.ui-banner .ui-banner-content-headline {
+.ui-banner.mh360.white-outline .ui-banner-content {
+	max-width: 920px;
+	display: inline-block;
+	z-index: 2;
+	padding: 20px;
+}
+.ui-banner.mh360.white-outline .ui-banner-content-headline {
 	font-size: 54px;
-	line-height: 60px;
+	line-height: 1.5em !important;
 }
 .ui-banner.fundraise-cta .ui-banner-content-headline {
 	font-size: 190%;
@@ -95,6 +101,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	color:#ffb000;
 }
 .ui-action-button.white-outline.fx-highlight-1-color-background-color-10 {
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border-color: white;
+}
+
+.ui-banner.white-outline .cta_outline_btn {
 	background-color: rgba(0,0,0,0);
 	color: white;
 	border-color: white;
@@ -236,6 +248,43 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: rgba(255,176,0,1);
 	color: white;
 	font-weight: 500;
+}
+
+.custom-pagi {
+	clear: both;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 20px auto;
+}
+.custom-pagi .page-numbers {
+	text-align: center;
+	background-color: #6FB7E9;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all .4s ease-in-out;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	margin: 4px;
+}
+.custom-pagi a:hover,
+.custom-pagi .current {
+	background-color: #0084B3;
+}
+.custom-pagi .next {
+	display: none;
+}
+.single-post nav.navigation.post-navigation {
+	display: none !important;
+}
+@media (min-width: 768px){
+	.ui-banner.center .ui-banner-content-action-button a {
+		padding: 0 28px;
+		width: 220px;
+	}
 }
 @media only screen and (max-width: 767px) {
 	figure.alignleft, img.alignleft, figure.alignright, img.alignright {

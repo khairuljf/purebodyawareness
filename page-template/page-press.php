@@ -12,57 +12,9 @@ global $pureopt; ?>
 
             <?php get_template_part( './template-parts/header' ); ?>
 
-            <div id="flex-component-0" class="ui-hero medium" style="display: none">
-
-                <!-- SEEMS LIKE THIS IS THE STATIC VERSION OF THE HERO... -->
-
-                <div class="ui-hero-slides regular-version" data-speed="6000">
-                    <div class="ui-hero-slide  animated center"
-                         style="background-image:url('<?php if (has_post_thumbnail()) {
-                             the_post_thumbnail_url();
-                         } ?>');z-index:1;">
-
-
-                        <div class="container">
-                            <div class="ui-hero-slide-container regular-version center">
-                                <div class="container">
-                                    <div class="ui-hero-slide-content">
-                                        <div class="ui-hero-slide-content-text">
-                                            <h1 class="ui-hero-slide-content-headline" style="color: #ffffff;">
-                                                <?php
-                                                $bannerTitle = get_post_meta(get_the_ID(), 'banner_title', true);
-                                                echo $bannerTitle;
-                                                ?>
-
-                                            </h1>
-                                            <div class="ui-hero-slide-title-background black opacity-5"></div>
-
-                                            <p class="ui-hero-slide-content-paragraph" style="color: #ffffff;"> <?php $bannerSubtitle = get_post_meta(get_the_ID(), 'banner_subtitle', true);
-                                                echo $bannerSubtitle; ?> </p>
-                                        </div>
-
-
-                                        <div class="ui-hero-slide-content-action-buttons">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
             <div id="flex-component-1" class="ui-press-grid">
                 <div class="press-grid-container">
                     <h3 class="press-grid-header"></h3>
-
-
-
-
                     <div class="press-grid-content-row">
                         <?php
                         $args = array(

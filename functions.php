@@ -179,18 +179,21 @@ require 'inc/metabox/functions.php';
 require 'inc/redux/ReduxCore/framework.php';
 require 'inc/redux/sample/options.php';
 
-function pagination_bar( $query_wp )
-{
-    $pages = $query_wp->max_num_pages;
-    $big = 999999999; // need an unlikely integer
-    if ($pages > 1)
-    {
-        $page_current = max(1, get_query_var('paged'));
+// Custom Pagination
+function pagination_bar() {
+    global $wp_query;
+
+    $total_pages = $wp_query->max_num_pages;
+
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
+        echo '<div class="custom-pagi">';
         echo paginate_links(array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-            'format' => '?paged=%#%',
-            'current' => $page_current,
-            'total' => $pages,
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
         ));
+        echo '</div>';
     }
 }

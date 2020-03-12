@@ -30,13 +30,17 @@ get_header();
                 </div>
 
                 <?php
-
+                echo '<div class="row">';
                 if (have_posts()) :
                     while (have_posts()) :
                         the_post();
+
                         get_template_part('template-parts/content', get_post_type());
+
                     endwhile;
-                    the_posts_navigation();
+                    echo "</div>";
+//                    the_posts_navigation();
+                    pagination_bar();
                 else :
                     get_template_part('template-parts/content', 'none');
                 endif;

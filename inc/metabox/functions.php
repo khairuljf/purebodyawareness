@@ -250,7 +250,7 @@ function page_cta()
         'name' => esc_html__('Add Class', 'cmb2'),
         'id' => 'addClass',
         'type' => 'text',
-        'desc' => 'Add Class to Section',
+        'desc' => 'Add Class to Section ex. white-outline',
         'attributes' => array(
             'data-conditional-id' => 'cta_active',
             'data-conditional-value' => 1,
@@ -601,7 +601,11 @@ function donate_button() {
         'object_types' => array('post'),
         'priority' => 'high'
     ));
-
+    $cmb_demo->add_field(array(
+        'id' => 'donate_class',
+        'name' => 'Custom Class',
+        'type' => 'text'
+    ));
     $cmb_demo->add_field(array(
         'id' => 'donate_btn',
         'name' => 'Donate Button Name',

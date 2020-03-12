@@ -49,10 +49,7 @@ get_header();
 
 
         </div>
-        </div>
-        </div>
 
-        </div>
         <div id="flex-component-1" class="ui-media-panel media-left" style="background-color: #F6F6F6">
 
             <div class="ui-media-panel-media-pane">
