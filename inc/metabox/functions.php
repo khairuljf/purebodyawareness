@@ -123,15 +123,7 @@ function banner_section()
         'id' => 'banner_section',
         'title' => esc_html__('Banner Section', 'cmb2'),
         'object_types' => array('page'), // Post type
-        // 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
-        // 'context'    => 'normal',
-//		 'priority'   => 'high',
-        // 'show_names' => true, // Show field names on the left
-        // 'cmb_styles' => false, // false to disable the CMB stylesheet
-        // 'closed'     => true, // true to keep the metabox closed by default
-        // 'classes'    => 'extra-class', // Extra cmb2-wrap classes
-        // 'classes_cb' => 'yourprefix_add_some_classes', // Add classes through a callback.
-
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php', 'page-template/partnerships.php') ),
     ));
 
 
@@ -140,48 +132,25 @@ function banner_section()
         'desc' => esc_html__('Please enter banner title (If available for this page)', 'cmb2'),
         'id' => 'banner_title',
         'type' => 'text',
-        // 'repeatable' => true,
-        // 'column' => array(
-        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
-        // 	'position' => 2, // Set as the second column.
-        // );
-        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
     ));
     $cmb_demo->add_field(array(
         'name' => esc_html__('Banner Subtitle', 'cmb2'),
         'desc' => esc_html__('Please enter banner subtitle (If available for this page)', 'cmb2'),
         'id' => 'banner_subtitle',
         'type' => 'text',
-        // 'repeatable' => true,
-        // 'column' => array(
-        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
-        // 	'position' => 2, // Set as the second column.
-        // );
-        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
     ));
     $cmb_demo->add_field(array(
         'name' => 'Banner Button Name',
         'desc' => 'Please enter banner button Name',
         'id' => 'banner_button_name',
         'type' => 'text',
-        // 'repeatable' => true,
-        // 'column' => array(
-        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
-        // 	'position' => 2, // Set as the second column.
-        // );
-        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
+
     ));
     $cmb_demo->add_field(array(
         'name' => esc_html__('Button Link', 'cmb2'),
         'desc' => esc_html__('Enter Button link', 'cmb2'),
         'id' => 'banner_button_url',
         'type' => 'text_url',
-        // 'repeatable' => true,
-        // 'column' => array(
-        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
-        // 	'position' => 2, // Set as the second column.
-        // );
-        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
     ));
     $cmb_demo->add_field(array(
         'name' => esc_html__('Banner Overlay', 'cmb2'),
@@ -233,12 +202,6 @@ function pressReadMore()
         'desc' => esc_html__('Please enter banner title (If available for this page)', 'cmb2'),
         'id' => 'press_read_url',
         'type' => 'text_url',
-        // 'repeatable' => true,
-        // 'column' => array(
-        // 	'name'     => esc_html__( 'Column Title', 'cmb2' ), // Set the admin column title
-        // 	'position' => 2, // Set as the second column.
-        // );
-        // 'display_cb' => 'yourprefix_display_text_small_column', // Output the display of the column values through a callback.
     ) );
 
 }
