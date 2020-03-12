@@ -123,7 +123,7 @@ function banner_section()
         'id' => 'banner_section',
         'title' => esc_html__('Banner Section', 'cmb2'),
         'object_types' => array('page'), // Post type
-        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php', 'page-template/partnerships.php') ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/partnerships.php') ),
     ));
 
 
@@ -664,3 +664,4 @@ add_action('cmb2_admin_init', 'donate_button');
 
 
 include 'customMeta.php';
+include 'customFieldForCTP.php';
