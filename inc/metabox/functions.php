@@ -614,22 +614,22 @@ function donate_button() {
         'type' => 'text_url'
     ));
 
-    $cmb_demo->add_field(array(
-        'id' => 'donate_width',
-        'name' => 'Donate Width',
-        'type'       => 'text',
-        'attributes' => array(
-            'type' => 'number',
-        ),
-    ));
-    $cmb_demo->add_field(array(
-        'id' => 'donate_height',
-        'name' => 'Donate Height',
-        'type'       => 'text',
-        'attributes' => array(
-            'type' => 'number',
-        ),
-    ));
+//    $cmb_demo->add_field(array(
+//        'id' => 'donate_width',
+//        'name' => 'Donate Width',
+//        'type'       => 'text',
+//        'attributes' => array(
+//            'type' => 'number',
+//        ),
+//    ));
+//    $cmb_demo->add_field(array(
+//        'id' => 'donate_height',
+//        'name' => 'Donate Height',
+//        'type'       => 'text',
+//        'attributes' => array(
+//            'type' => 'number',
+//        ),
+//    ));
 
     $cmb_demo->add_field(array(
         'name' => esc_html__('Donate Background', 'cmb2'),

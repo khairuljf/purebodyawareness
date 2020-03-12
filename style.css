@@ -35,7 +35,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .base-header .base-header-logo a img{
 	height: auto;
 }
-
+.wp-block-cover.no-donate-bg {
+	height: unset;
+	min-height: unset;
+	background: transparent;
+}
 .ui-hero-slide-content-action-buttons {
 	margin-top: 15px;
 }

@@ -6,150 +6,51 @@
  *
  * @package purebodyawareness
  */
+$donate_bg_class = $donate_bg ? 'has-donate-bg' : 'no-donate-bg';
+$donate_btn = get_post_meta(get_the_ID(), 'donate_btn', true);
+$donate_btn_url = get_post_meta(get_the_ID(), 'donate_btn_url', true);
+
 ?>
 
 <?php get_template_part('template-parts/blog-header') ?>
 <main role="main" class="blog-rel">
-
     <!-- section -->
     <section class="container">
-
         <!-- article -->
         <article id="post-15804"
-                 class="post-15804 post type-post status-publish format-standard has-post-thumbnail hentry category-animal-medical-cases category-animals category-australia-bushfires category-planet category-project-peril">
+                 class="post type-post status-publish format-standard has-post-thumbnail hentry category-animal-medical-cases category-animals category-australia-bushfires category-planet category-project-peril">
 
             <div class="post-content">
 
                 <hr class="top-blog-hr">
 
-                <!-- post title -->
-
                 <ul class="blog-cat">
                     <?php
-//
+                    //
                     $categories = get_the_category();
                     $separator = ', ';
                     $output = '';
-                    if ( ! empty( $categories ) ) {
-                        foreach( $categories as $category ) {
-                            $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                    if (!empty($categories)) {
+                        foreach ($categories as $category) {
+                            $output .= '<a href="' . esc_url(get_category_link($category->term_id)) . '" alt="' . esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)) . '">' . esc_html($category->name) . '</a>' . $separator;
                         }
-                        echo trim( $output, $separator );
+                        echo trim($output, $separator);
                     }
                     ?>
                 </ul>
 
                 <h1> <?php echo get_the_title(); ?></h1>
-                <!-- /post title -->
 
                 <?php echo get_the_content(); ?>
 
 
-                <div class="wp-block-image">
-                    <figure class="aligncenter is-resized"><img
-                                src="https://greatergood.org/wp-content/uploads/2020/03/Koala-with-Stuffed-Bear-in-Vets-Arms_©Paul-Ramos_Australian-Bushfires-2020.jpg"
-                                alt="" class="wp-image-15806" width="378" height="408"
-                                srcset="https://greatergood.org/wp-content/uploads/2020/03/Koala-with-Stuffed-Bear-in-Vets-Arms_©Paul-Ramos_Australian-Bushfires-2020.jpg 755w, https://greatergood.org/wp-content/uploads/2020/03/Koala-with-Stuffed-Bear-in-Vets-Arms_©Paul-Ramos_Australian-Bushfires-2020-300x324.jpg 300w, https://greatergood.org/wp-content/uploads/2020/03/Koala-with-Stuffed-Bear-in-Vets-Arms_©Paul-Ramos_Australian-Bushfires-2020-120x130.jpg 120w"
-                                sizes="(max-width: 378px) 100vw, 378px"/></figure>
-                </div>
-
-
-                <p style="font-size:18px">In February 2020, IFAW contracted wildlife veterinarian, <a
-                            href="https://www.instagram.com/vetpaulramos/">Dr. Paul Ramos</a> to help provide veterinary
-                    care at Possumwood, a wildlife treatment facility that has been inundated with animals suffering
-                    from burns.</p>
-
-
-                <h2>Wildlife Goes Viral</h2>
-
-
-                <p style="font-size:18px">While there, his work with koalas received some international attention. The
-                    video that captured hearts around the world was one of a recently orphaned baby koala. While
-                    mourning the loss of her mother, the brave koala cub found strength in a stuffed koala presented to
-                    her by Dr. Ramos.</p>
-
-
-                <center>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HRlV7c0n5-Y" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen=""></iframe>
-                </center>
-
-
-                <p style="font-size:18px">&#8220;I always have my phone on me and so I like to capture moments,&#8221;
-                    Dr. Ramos said of his experience. </p>
-
-
-                <p style="font-size:18px">He recalls another touching moment with a kangaroo and her joey.</p>
-
-
-                <p style="font-size:18px">&#8220;This mama, her ears are blackened and tarred, she might lose them, her
-                    fur is all singed, her hands and feet are completely burned. You could tell she had been through a
-                    lot. Her baby was completely untouched.&#8221; </p>
-
-
-                <p style="font-size:18px">Dr. Ramos says the baby would not have lived, had its mom not done everything
-                    in her power to keep him in her pouch and protect him, even if it meant risking her own life. </p>
-
-
-                <div class="wp-block-image">
-                    <figure class="aligncenter is-resized"><img
-                                src="https://greatergood.org/wp-content/uploads/2020/03/IFAW-Vet-Checks-on-Sedated-Kangaroo-During-Burn-Treatment_©Paul-Ramos_Australian-Bushfires-2020.jpg"
-                                alt="" class="wp-image-15807" width="384" height="430"
-                                srcset="https://greatergood.org/wp-content/uploads/2020/03/IFAW-Vet-Checks-on-Sedated-Kangaroo-During-Burn-Treatment_©Paul-Ramos_Australian-Bushfires-2020.jpg 768w, https://greatergood.org/wp-content/uploads/2020/03/IFAW-Vet-Checks-on-Sedated-Kangaroo-During-Burn-Treatment_©Paul-Ramos_Australian-Bushfires-2020-300x336.jpg 300w, https://greatergood.org/wp-content/uploads/2020/03/IFAW-Vet-Checks-on-Sedated-Kangaroo-During-Burn-Treatment_©Paul-Ramos_Australian-Bushfires-2020-120x134.jpg 120w"
-                                sizes="(max-width: 384px) 100vw, 384px"/></figure>
-                </div>
-
-
-                <h2>Still a lot of Work to be Done</h2>
-
-
-                <p style="font-size:18px">Though the fires have died down, the work isn&#8217;t done. Dr. Ramos says
-                    that there are still hundreds of animals healing and waiting for their environment to be hospitable
-                    once again.</p>
-
-
-                <p style="font-size:18px">&#8220;This is not the first and definitely not the last time we&#8217;re
-                    going to see these massive natural fires,&#8221; Dr. Ramos said. &#8220;Going forward, for the next
-                    few months to years, these animals need to be supported in some way.&#8221; </p>
-
-
-                <p style="font-size:18px">While some animals are taking longer to heal, most of them just don&#8217;t
-                    have a home to return to right now. With bare trees and little to no grass, these animals would
-                    likely starve if released back to their homes. </p>
-
-
-                <p style="font-size:18px">Currently, injured animals at staying at clinics, warehouses, and even
-                    volunteers&#8217; homes. Dr. Ramos believes funding for these immediate needs is crucial, but there
-                    are other ways to help. </p>
-
-
-                <h2>How You Can Still Help</h2>
-
-
-                <p style="font-size:18px">&#8220;Going forward, we need to think about the future, big picture. These
-                    extreme fire seasons are not natural, so what are we going to do to prevent these things from
-                    happening?&#8221; Dr. Ramos said.</p>
-
-
-                <p style="font-size:18px">Dr. Ramos believes small changes in our lifestyles, who we vote for, and truly
-                    thinking about what kind of future we want to have, can prevent these natural disasters from
-                    happening over and over again. </p>
-
-
-                <div class="wp-block-cover"
-                     style="background-image:url(https://greatergood.org/wp-content/uploads/2020/03/Koala-Being-Examined_©Mosswood-Wildlife_Australian-Bushfires-2020.jpg);background-position:44.09448818897638% 82.35294117647058%">
+                <div class="wp-block-cover <?php echo $donate_bg_class; ?>" style="margin: 10px auto; background-image:url(<?php echo $donate_bg; ?>);">
                     <div class="wp-block-cover__inner-container">
-                        <div class="wp-block-button aligncenter"><a
-                                    class="wp-block-button__link has-background has-vivid-cyan-blue-background-color"
-                                    href="https://give.greatergood.org/campaign/bushfires-ravage-australia-help-now/c266786?utm_source=ggo-ggoblog&amp;utm_medium=ggo-blog&amp;utm_campaign=australia-fires">DONATE
-                                TODAY</a></div>
+                        <div class="wp-block-button aligncenter">
+                            <a class="wp-block-button__link has-background has-vivid-cyan-blue-background-color"
+                               href=" <?php echo esc_url($donate_btn_url); ?> "> <?php echo $donate_btn; ?> </a></div>
                     </div>
                 </div>
-
-                <p>
-                <p>
-
 
             </div>
 

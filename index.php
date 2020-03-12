@@ -14,35 +14,34 @@
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main blog-rel ui-blog-search-form-submit">
+<?php get_template_part('template-parts/blog-header'); ?>
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main blog-rel ui-blog-search-form-submit">
             <section class="container blog-container">
 
-		<?php
-		if ( have_posts() ) :
+                <div class="blog-search">
+                    <form role="search" method="get" id="searchform" class="searchform" action="">
+                        <div>
+                            <label class="screen-reader-text" for="s">Search for:</label>
+                            <input type="text" value="" name="s" id="s">
+                            <input type="submit" id="searchsubmit" value="Search">
+                        </div>
+                    </form>
+                </div>
 
-			if ( is_home() && ! is_front_page() ) : ?><header><h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1></header><?php endif;
+                <?php
 
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+                if (have_posts()) :
+                    while (have_posts()) :
+                        the_post();
+                        get_template_part('template-parts/content', get_post_type());
+                    endwhile;
+                    the_posts_navigation();
+                else :
+                    get_template_part('template-parts/content', 'none');
+                endif;
+                ?>
             </section>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+        </main><!-- #main -->
+    </div><!-- #primary -->
+<?php get_footer();
