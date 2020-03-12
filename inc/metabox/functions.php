@@ -549,6 +549,12 @@ function partner_accordion()
         'priority' => 'high'
     ));
 
+    $cmb_demo->add_field(array(
+        'name' => 'Accordion Main Title',
+        'id' => 'accordion_main_title',
+        'type' => 'text',
+    ));
+
     $group_field_id = $cmb_demo->add_field(array(
         'id' => 'partner_accordion_group',
         'type' => 'group',

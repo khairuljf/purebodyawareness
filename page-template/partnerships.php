@@ -18,14 +18,19 @@ $partnership_banner_bg = get_post_meta(get_the_ID(), 'partnership_banner_bg', tr
 $partnership_parallax_bg = get_post_meta(get_the_ID(), 'partnership_parallax_bg', true);
 $adesc = get_post_meta(get_the_ID(), 'adesc', true);
 
+$accordion_main_title = get_post_meta(get_the_ID(), 'accordion_main_title', true);
+$accordion_title = get_post_meta(get_the_ID(), 'accordion_title', true);
+$accordion_desc = get_post_meta(get_the_ID(), 'accordion_desc', true);
+$accordion_btn = get_post_meta(get_the_ID(), 'accordion_btn', true);
+$accordion_url = get_post_meta(get_the_ID(), 'accordion_url', true);
+
+
 ?>
     <main role="main">
         <!-- section -->
         <section>
 
             <div id="flex-component-0" class="ui-hero small">
-
-                <!-- SEEMS LIKE THIS IS THE STATIC VERSION OF THE HERO... -->
 
                 <div class="ui-hero-slides regular-version" data-speed="6000">
                     <div class="ui-hero-slide fixed animated center"
@@ -40,7 +45,7 @@ $adesc = get_post_meta(get_the_ID(), 'adesc', true);
                                     <div class="ui-hero-slide-content">
 
                                         <div class="ui-hero-slide-content-attachment">
-                                            <?php if (has_post_thumbnail): ?>
+                                            <?php if (has_post_thumbnail()): ?>
                                                 <div class="ui-hero-slide-content-attachment-image">
                                                     <?php the_post_thumbnail(array(580, 169)); ?>
                                                 </div>
@@ -56,10 +61,10 @@ $adesc = get_post_meta(get_the_ID(), 'adesc', true);
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div id="flex-component-1" class="ui-content-panel center" style="background-color: #ffffff">
+                <?php $i = 0; ?>
+                <div id="flex-component-<?php $i++; ?>" class="ui-content-panel center" style="background-color: #ffffff">
                     <div class="container ui-content-panel-container">
                         <div class="ui-content-panel-content">
 
@@ -91,13 +96,16 @@ $adesc = get_post_meta(get_the_ID(), 'adesc', true);
                     </div>
                 </div>
             </div>
-            <div id="flex-component-2" class="ui-editorial">
-                <div class="container">
-                    <div class="ui-editorial-content">
-                        <h1 style="text-align: center; color: #0097ce;">Ways You Can Partner With GreaterGood.org:</h1>
+
+            <?php if (!empty($accordion_main_title)): ?>
+                <div id="flex-component-2" class="ui-editorial">
+                    <div class="container">
+                        <div class="ui-editorial-content">
+                            <h1 style="text-align: center; color: #0097ce;"><?php echo $accordion_main_title; ?></h1>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
             <div class="ui-drawer center"
                  style="background-image:url('https://greatergood.org/wp-content/uploads/2019/04/ggo-blue.png');">
 
@@ -343,10 +351,7 @@ $adesc = get_post_meta(get_the_ID(), 'adesc', true);
 
 
             </div>
-            </div>
-            </div>
 
-            </div>
             <div id="flex-component-10" class="ui-content-panel center" style="background-color: #f6f6f6">
                 <div class="container ui-content-panel-container">
                     <div class="ui-content-panel-content">
