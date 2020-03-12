@@ -587,15 +587,72 @@ function partner_accordion()
     $cmb_demo->add_group_field($group_field_id, array(
         'name' => 'Button Url',
         'id' => 'accordion_url',
-        'type' => 'text_url',
+        'type' => 'text',
     ));
 }
 
 add_action('cmb2_admin_init', 'partner_accordion');
 
 
+function donate_button() {
+    $cmb_demo = new_cmb2_box(array(
+        'id' => 'post_donate_button_section',
+        'title' => 'Donate Button',
+        'object_types' => array('post'),
+        'priority' => 'high'
+    ));
 
+    $cmb_demo->add_field(array(
+        'id' => 'donate_btn',
+        'name' => 'Donate Button Name',
+        'type' => 'text'
+    ));
 
+    $cmb_demo->add_field(array(
+        'id' => 'donate_btn_url',
+        'name' => 'Donate Button Url',
+        'type' => 'text_url'
+    ));
+
+    $cmb_demo->add_field(array(
+        'id' => 'donate_width',
+        'name' => 'Donate Width',
+        'type'       => 'text',
+        'attributes' => array(
+            'type' => 'number',
+        ),
+    ));
+    $cmb_demo->add_field(array(
+        'id' => 'donate_height',
+        'name' => 'Donate Height',
+        'type'       => 'text',
+        'attributes' => array(
+            'type' => 'number',
+        ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Donate Background', 'cmb2'),
+        'id' => 'donate_bg',
+        'type' => 'file',
+        'options' => array(
+            'url' => true,
+        ),
+        'text' => array(
+            'add_upload_file_text' => 'Add Image'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png'
+            )
+
+        ),
+        'preview_size' => 'medium',
+    ));
+}
+
+add_action('cmb2_admin_init', 'donate_button');
 
 
 

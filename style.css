@@ -20,7 +20,18 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-
+.blog-cat {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.blog-cat li {
+	display: inline-block;
+}
+.blog-cat li a{
+	color: #0097ce;
+	text-decoration: underline;
+}
 .base-header .base-header-logo a img{
 	height: auto;
 }

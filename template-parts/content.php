@@ -7,53 +7,52 @@
  * @package purebodyawareness
  */
 
+$post_donate_button_section = get_post_meta(get_the_ID(), 'post_donate_button_section', true);
+$donate_btn = get_post_meta(get_the_ID(), 'donate_btn', true);
+$donate_btn_url = get_post_meta(get_the_ID(), 'donate_btn_url', true);
+$donate_width = get_post_meta(get_the_ID(), 'donate_width', true);
+$donate_height = get_post_meta(get_the_ID(), 'donate_height', true);
+$donate_bg = get_post_meta(get_the_ID(), 'donate_bg', true);
+$donate_bg_url = $donate_bg ? $donate_bg : '';
 ?>
+<div class="col-md-6">
+    <a href="<?php echo esc_url(get_the_permalink()); ?>"
+       title="<?php echo esc_html(get_the_title()); ?>" class="post-list-item-anchor">
+        <article class="post-list-article">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+            <div class="post-list-item"
+                 style="background-image:url('<?php if (has_post_thumbnail(get_the_ID())) {
+                     echo the_post_thumbnail_url();
+                 } ?>')"></div>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				purebodyawareness_posted_on();
-				purebodyawareness_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php purebodyawareness_post_thumbnail(); ?>
+            <div class="post-list-item-info">
 
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'purebodyawareness' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+                <div class="post-list-item-date"> <?php echo date('l,' . 'F' . 'j'); ?> <!--Friday, March 6 --></div>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'purebodyawareness' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
+                <div class="ui-hr blog-item-hr">
+                    <hr class="fx-main-color-background-color-10"/>
+                </div>
 
-	<footer class="entry-footer">
-		<?php purebodyawareness_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+                <h2><?php echo get_the_title(); ?></h2>
+
+                <p class="post-list-item-excerpt"><?php echo get_the_excerpt(); ?></p>
+
+                <?php if ($post_donate_button_section): ?>
+
+                    <div class="wp-block-cover" style="background-image:url('<?php echo esc_url($donate_bg_url); ?>'); width: <?php echo $donate_width;?> height: <?php echo $donate_height; ?>">
+                        <div class="wp-block-cover__inner-container">
+                            <div class="wp-block-button aligncenter"><a
+                                        class="wp-block-button__link has-background has-vivid-cyan-blue-background-color"
+                                        href="<?php echo esc_url($donate_btn_url); ?>"><?php echo $donate_btn; ?></a></div>
+                        </div>
+                    </div>
+
+
+                <?php endif; ?>
+
+            </div>
+
+        </article>
+    </a>
+</div>
