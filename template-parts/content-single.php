@@ -6,6 +6,7 @@
  *
  * @package purebodyawareness
  */
+$donate_bg = get_post_meta(get_the_ID(), 'donate_bg', true);
 $donate_bg_class = $donate_bg ? 'has-donate-bg' : 'no-donate-bg';
 $donate_btn = get_post_meta(get_the_ID(), 'donate_btn', true);
 $donate_btn_url = get_post_meta(get_the_ID(), 'donate_btn_url', true);
