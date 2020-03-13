@@ -371,8 +371,7 @@ function about_page_cta() {
         'title' => esc_html__('About US Second Call To Action', 'cmb2'),
         'object_types' => array('page'),
         'priority' => 'high',
-        'desc' => 'This call to action only show on About Us Page',
-        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php') ),
+        'desc' => 'This call to action only show on About Us Page'
     ));
 
     $cmb_demo->add_field(array(
@@ -466,7 +465,7 @@ function about_page_cta() {
 
     $cmb_demo->add_field(array(
         'name' => 'CTA Overlay Color',
-        'id' => 'cta_overlay',
+        'id' => 'about_cta_overlay',
         'type' => 'colorpicker',
         'default' => '#ffffff',
         'attributes' => array(
@@ -479,9 +478,9 @@ function about_page_cta() {
     ));
 }
 add_action('cmb2_admin_init', 'about_page_cta');
+
 // Two Column Page
-function two_column_section()
-{
+function two_column_section() {
 
     $cmb_demo = new_cmb2_box(array(
         'id' => 'two_column_page',

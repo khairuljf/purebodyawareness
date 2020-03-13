@@ -9,9 +9,6 @@
 ?>
 
 <section>
-
-    <?php get_template_part('./template-parts/header'); ?>
-
     <?php
     $two_column_group = get_post_meta(get_the_ID(), 'two_column_repeat_group', true);
 

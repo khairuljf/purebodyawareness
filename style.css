@@ -282,6 +282,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .custom-pagi .current {
 	background-color: #0084B3;
 }
+.custom-pagi .prev,
 .custom-pagi .next {
 	display: none;
 }
@@ -291,6 +292,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .home .ui-banner a {
 	border-color: #ffb000;
 	color: #000;
+}
+.ui-banner.aboutpage a {
+	border-color: rgba(0,151,206,1);
+	color: #fff;
+	background-color: rgba(0,151,206,1);
 }
 
 @media (min-width: 768px){

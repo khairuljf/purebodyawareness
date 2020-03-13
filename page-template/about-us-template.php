@@ -1,6 +1,6 @@
 <?php
 /*
- * template name:About Us
+ * Template Name: About Us
  * */
 
 get_header();
@@ -8,6 +8,27 @@ get_header();
 $FirstSectionImg = get_post_meta(get_the_ID(), 'about_top_img',true);
 $about_1st_title = get_post_meta(get_the_ID(), 'about_1st_title',true);
 $about_top_content = get_post_meta(get_the_ID(), 'about_top_content',true);
+
+// about us CTA
+$aboutCta_title = get_post_meta(get_the_ID(), 'aboutCta_title',true);
+
+$aboutCta_section = get_post_meta(get_the_ID(), 'aboutCta_section', true);
+$cta_title = get_post_meta(get_the_ID(), 'cta_title', true);
+$cta_subtitle = get_post_meta(get_the_ID(), 'cta_subtitle', true);
+$cta_button_name = get_post_meta(get_the_ID(), 'cta_button_name', true);
+$cta_button_url = get_post_meta(get_the_ID(), 'cta_button_url', true);
+
+$cta_button_name2 = get_post_meta(get_the_ID(), 'cta_button_name2', true);
+$cta_button_url2 = get_post_meta(get_the_ID(), 'cta_button_url2', true);
+
+$cta_bg_img = get_post_meta(get_the_ID(), 'cta_bg_img', true);
+$cta_show_overlay = get_post_meta(get_the_ID(), 'cta_show_overlay', true);
+$cta_overlay = get_post_meta(get_the_ID(), 'cta_overlay', true);
+$addClass = get_post_meta(get_the_ID(), 'addClass', true);
+$isAddClass = $addClass ? $addClass : '';
+$cta_bg_img ? $cta_bg_img : '';
+
+
 ?>
 
     <main role="main">
@@ -16,7 +37,7 @@ $about_top_content = get_post_meta(get_the_ID(), 'about_top_content',true);
 
             <?php get_template_part('template-parts/two-column'); ?>
 
-            <div id="flex-component-0" class="ui-media-panel media-left" style="background-color: #F6F6F6">
+            <div id="flex-component-0 " class="ui-media-panel media-left" style="display: none; background-color: #F6F6F6">
 
                 <div class="ui-media-panel-media-pane">
 
@@ -366,10 +387,8 @@ $about_top_content = get_post_meta(get_the_ID(), 'about_top_content',true);
                 </div>
             </div>
 
-
-            <?php get_template_part('template-parts/call-to-action'); ?>
-            <div class="ui-banner center"
-                 style="background-image:url('https://greatergood.org/wp-content/uploads/2016/08/floodimage-1500x647.jpg');">
+            <?php get_template_part('template-parts/about-call-to-action'); ?>
+            <div class="ui-banner center" style="display: none;background-image:url('https://greatergood.org/wp-content/uploads/2016/08/floodimage-1500x647.jpg');">
 
                 <div class="ui-banner-overlay fx-main-color-background-color-05"></div>
 

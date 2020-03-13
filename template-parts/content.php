@@ -20,40 +20,25 @@ $donate_bg_url = $donate_bg ? $donate_bg : '';
        title="<?php echo esc_html(get_the_title()); ?>" class="post-list-item-anchor">
         <article class="post-list-article">
 
-            <div class="post-list-item"
-                 style="background-image:url('<?php if (has_post_thumbnail(get_the_ID())) {
-                     echo the_post_thumbnail_url();
-                 } ?>')"></div>
-
-
+            <div class="post-list-item" style="background-image:url('<?php if (has_post_thumbnail(get_the_ID())) {echo the_post_thumbnail_url();} ?>')"></div>
             <div class="post-list-item-info">
-
                 <div class="post-list-item-date"> <?php echo date('l,' . 'F' . 'j'); ?> <!--Friday, March 6 --></div>
-
                 <div class="ui-hr blog-item-hr">
                     <hr class="fx-main-color-background-color-10"/>
                 </div>
-
                 <h2><?php echo get_the_title(); ?></h2>
-
                 <p class="post-list-item-excerpt"><?php echo get_the_excerpt(); ?></p>
                 <?php if ($post_donate_button_section): ?>
-
                     <div class="wp-block-cover "
                          style="background-image:url('<?php echo esc_url($donate_bg_url); ?>');">
                         <div class="wp-block-cover__inner-container">
-                            <div class="wp-block-button aligncenter"><a
-                                        class="wp-block-button__link has-background has-vivid-cyan-blue-background-color"
-                                        href="<?php echo esc_url($donate_btn_url); ?>"><?php echo $donate_btn; ?></a>
+                            <div class="wp-block-button aligncenter">
+                                <a class="wp-block-button__link has-background has-vivid-cyan-blue-background-color" href="<?php echo esc_url($donate_btn_url); ?>"><?php echo $donate_btn; ?></a>
                             </div>
                         </div>
                     </div>
-
-
                 <?php endif; ?>
-
             </div>
-
         </article>
     </a>
 </div>
