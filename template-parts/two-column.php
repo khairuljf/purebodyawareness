@@ -24,8 +24,8 @@
             $btnLink = $entry['two_column_btn_link'];
         }
 
-        if (!empty($entry['two_column_customClass'])) {
-            $customClass = $entry['two_column_customClass'];
+        if (!empty($entry['$two_column_customClass'])) {
+            $customClass = $entry['$two_column_customClass'];
         }
 
         if (isset($entry['two_column_image_align'])) {

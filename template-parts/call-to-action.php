@@ -12,6 +12,10 @@ $cta_title = get_post_meta(get_the_ID(), 'cta_title', true);
 $cta_subtitle = get_post_meta(get_the_ID(), 'cta_subtitle', true);
 $cta_button_name = get_post_meta(get_the_ID(), 'cta_button_name', true);
 $cta_button_url = get_post_meta(get_the_ID(), 'cta_button_url', true);
+
+$cta_button_name2 = get_post_meta(get_the_ID(), 'cta_button_name2', true);
+$cta_button_url2 = get_post_meta(get_the_ID(), 'cta_button_url2', true);
+
 $cta_bg_img = get_post_meta(get_the_ID(), 'cta_bg_img', true);
 $cta_show_overlay = get_post_meta(get_the_ID(), 'cta_show_overlay', true);
 $cta_overlay = get_post_meta(get_the_ID(), 'cta_overlay', true);
@@ -46,8 +50,8 @@ if ($cta_active) { ?>
                         <?php endif ?>
 
                     </div>
-                    <?php if (!empty($cta_button_url)): ?>
                         <div class="ui-banner-content-action-buttons">
+                            <?php if($cta_button_url): ?>
                             <div class="ui-banner-content-action-button">
                                 <a href="<?php echo $cta_button_url ?>"
                                    class="cta_outline_btn ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
@@ -55,8 +59,19 @@ if ($cta_active) { ?>
                                     <?php echo $cta_button_name; ?>
                                 </a>
                             </div>
+                            <?php endif; ?>
+
+                            <?php if($cta_button_url2): ?>
+                            <div class="ui-banner-content-action-button">
+                                <a href="<?php echo $cta_button_url2 ?>"
+                                   class="ui-action-button white-outline fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
+                                   target="_blank">
+                                    <?php echo $cta_button_name2; ?>
+                                </a>
+                            </div>
+                            <?php endif; ?>
+
                         </div>
-                    <?php endif; ?>
 
                 </div>
 

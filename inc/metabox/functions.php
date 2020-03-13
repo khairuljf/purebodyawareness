@@ -123,7 +123,7 @@ function banner_section()
         'id' => 'banner_section',
         'title' => esc_html__('Banner Section', 'cmb2'),
         'object_types' => array('page'), // Post type
-        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/partnerships.php') ),
+//        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/Front-page-template.php', 'page-template/partnerships.php', 'page-template/fundraise-for-ggo.php') ),
     ));
 
 
@@ -160,8 +160,8 @@ function banner_section()
     ));
 
     $cmb_demo->add_field(array(
-        'name' => 'Test Color Picker',
-        'id' => 'wiki_test_colorpicker',
+        'name' => 'Banner Overlay Color',
+        'id' => 'banner_overlay_color',
         'type' => 'colorpicker',
         'default' => '#ffffff',
         'attributes' => array(
@@ -294,6 +294,26 @@ function page_cta()
             'data-conditional-value' => 1,
         ),
     ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('CTA Button Name 2', 'cmb2'),
+        'id' => 'cta_button_name2',
+        'type' => 'text',
+        'attributes' => array(
+            'data-conditional-id' => 'cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Button Link 2', 'cmb2'),
+        'id' => 'cta_button_url2',
+        'type' => 'text_url',
+        'attributes' => array(
+            'data-conditional-id' => 'cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+
     $cmb_demo->add_field(array(
         'name' => esc_html__('CTA Background Image', 'cmb2'),
         'id' => 'cta_bg_img',
@@ -342,9 +362,123 @@ function page_cta()
         ),
     ));
 }
-
 add_action('cmb2_admin_init', 'page_cta');
 
+// Only for abous us page
+function about_page_cta() {
+    $cmb_demo = new_cmb2_box(array(
+        'id' => 'aboutCta_section',
+        'title' => esc_html__('About US Second Call To Action', 'cmb2'),
+        'object_types' => array('page'),
+        'priority' => 'high',
+        'desc' => 'This call to action only show on About Us Page',
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php') ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Active Call to Action', 'cmb2'),
+        'id' => 'about_cta_active',
+        'type' => 'checkbox'
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Add Class', 'cmb2'),
+        'id' => 'aboutAddClass',
+        'type' => 'text',
+        'desc' => 'Add Class to Section ex. white-outline',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('CTA Title', 'cmb2'),
+        'id' => 'aboutCta_title',
+        'type' => 'text',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('CTA Subtitle', 'cmb2'),
+        'id' => 'aboutCta_subtitle',
+        'type' => 'textarea_small',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('CTA Button Name', 'cmb2'),
+        'id' => 'aboutCta_button_name',
+        'type' => 'text',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Button Link', 'cmb2'),
+        'id' => 'aboutCta_button_url',
+        'type' => 'text_url',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('CTA Background Image', 'cmb2'),
+        'id' => 'aboutCta_bg_img',
+        'type' => 'file',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        ),
+        'options' => array(
+            'url' => true,
+        ),
+        'text' => array(
+            'add_upload_file_text' => 'Add Background Image'
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png'
+            )
+
+        ),
+        'preview_size' => 'medium',
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Add CTA Overlay', 'cmb2'),
+        'id' => 'about_cta_show_overlay',
+        'type' => 'checkbox',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_active',
+            'data-conditional-value' => 1,
+        )
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => 'CTA Overlay Color',
+        'id' => 'cta_overlay',
+        'type' => 'colorpicker',
+        'default' => '#ffffff',
+        'attributes' => array(
+            'data-conditional-id' => 'about_cta_show_overlay',
+            'data-conditional-value' => 1,
+        ),
+        'options' => array(
+            'alpha' => true, // Make this a rgba color picker.
+        ),
+    ));
+}
+add_action('cmb2_admin_init', 'about_page_cta');
 // Two Column Page
 function two_column_section()
 {

@@ -72,14 +72,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .ui-banner.fundraise-cta .ui-banner-content-headline {
 	font-size: 190%;
 }
+
 .ui-banner .ui-banner-content-paragraph {
-	font-size: 30px;
+	font-size: 100%;
+	/*font-size: 30px;*/
 	line-height: 45px;
-}.ui-banner.fundraise-cta  .ui-banner-content-paragraph {
+}
+.donateCTA.ui-banner a {
+	border-color: #ffb000;
+	color: #040404;
+}
+
+.ui-banner.fundraise-cta  .ui-banner-content-paragraph {
 	 font-size: 100%;
  }
 .ui-banner.mh360 {
-	min-height: 360px;
+	/*min-height: 360px;*/
 }
 .ui-banner.mh360.fundraise-cta {
 	min-height: 250px;
@@ -280,10 +288,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .single-post nav.navigation.post-navigation {
 	display: none !important;
 }
+.home .ui-banner a {
+	border-color: #ffb000;
+	color: #000;
+}
+
 @media (min-width: 768px){
 	.ui-banner.center .ui-banner-content-action-button a {
 		padding: 0 28px;
 		width: 220px;
+	}
+	.donateCTA.ui-banner.center {
+		min-height: 250px;
+	}
+	.donateCTA.ui-banner.center .ui-banner-content-action-button a{
+		padding: 0;
 	}
 }
 @media only screen and (max-width: 767px) {

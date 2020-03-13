@@ -1,28 +1,20 @@
 <?php
-
 /*
  * template name:About Us
  * */
 
-
 get_header();
-?>
-
-
-
-<?php
-
 
 $FirstSectionImg = get_post_meta(get_the_ID(), 'about_top_img',true);
 $about_1st_title = get_post_meta(get_the_ID(), 'about_1st_title',true);
 $about_top_content = get_post_meta(get_the_ID(), 'about_top_content',true);
-
-
 ?>
 
     <main role="main">
         <!-- section -->
         <section>
+
+            <?php get_template_part('template-parts/two-column'); ?>
 
             <div id="flex-component-0" class="ui-media-panel media-left" style="background-color: #F6F6F6">
 
@@ -375,6 +367,7 @@ $about_top_content = get_post_meta(get_the_ID(), 'about_top_content',true);
             </div>
 
 
+            <?php get_template_part('template-parts/call-to-action'); ?>
             <div class="ui-banner center"
                  style="background-image:url('https://greatergood.org/wp-content/uploads/2016/08/floodimage-1500x647.jpg');">
 
