@@ -29,7 +29,7 @@ $i = 1;
 
                                         <div class="ui-hero-slide-content-attachment">
 
-                                            <?php if (has_post_thumbnail): ?>
+                                            <?php if (has_post_thumbnail()): ?>
                                                 <div class="ui-hero-slide-content-attachment-image">
                                                     <?php the_post_thumbnail(array(580, 169)); ?>
                                                 </div>

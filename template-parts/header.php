@@ -8,7 +8,9 @@
  */
 
 $addBannerClass = get_post_meta(get_the_ID(), 'addBannerClass', true);
-$isAddBannerClass = $isAddBannerClass ? $isAddBannerClass : '';
+$bannerOC = get_post_meta(get_the_ID(), 'banner_overlay_color', true);
+$bannerOverlay = get_post_meta(get_the_ID(), 'banner_overlay', true);
+$isAddBannerClass = $addBannerClass ? $addBannerClass : '';
 
 ?>
 
@@ -18,7 +20,7 @@ $isAddBannerClass = $isAddBannerClass ? $isAddBannerClass : '';
              style="background-image:url('<?php if (has_post_thumbnail()) {
                  the_post_thumbnail_url();
              } ?>');z-index:1;">
-            <div class="ui-hero-slide-overlay fx-main-color-background-color-"></div>
+            <div class="ui-hero-slide-overlay fx-main-color-background-color-" style="background-color: <?php echo $bannerOC; ?>"></div>
             <div class="container">
                 <div class="ui-hero-slide-container -version center">
                     <div class="container">

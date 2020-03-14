@@ -52,7 +52,6 @@ $i = 1;
                     </div>
                 </div>
 
-                <?php $i = 1; ?>
                 <div id="flex-component-<?php $i++; ?>" class="ui-content-panel center"
                      style="background-color: #ffffff">
                     <div class="container ui-content-panel-container">
@@ -103,7 +102,7 @@ $i = 1;
                 $accordion_desc = get_post_meta(get_the_ID(), 'accordion_desc', true);
                 $accordion_btn = get_post_meta(get_the_ID(), 'accordion_btn', true);
                 $accordion_url = get_post_meta(get_the_ID(), 'accordion_url', true);
-
+                $j = 1;
                 foreach ((array)$partner_accordion_group as $key => $entry) :
 
                     $accordion_title = $accordion_desc = $accordion_btn = $accordion_url = '';
@@ -122,7 +121,7 @@ $i = 1;
                                     <?php if ($accord_title): ?>
                                         <div class="ui-drawer-content-text ">
                                             <h1 class="ui-drawer-content-headline accordion-toggle">
-                                                <?php echo $i++ .'.'; ?> <?php echo $accord_title ?>
+                                                <?php echo $j++ .'.'; ?> <?php echo $accord_title ?>
                                                 <i class="fa fa-angle-down"></i>
                                             </h1>
                                         </div>

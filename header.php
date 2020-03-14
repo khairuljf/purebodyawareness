@@ -21,7 +21,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <meta charset="UTF-8">
-    <title>Home &mdash; GreaterGood.org : GreaterGood.org</title>
+    <title><?php wp_title(''); ?> &mdash; GreaterGood.org : GreaterGood.org</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round"/>

@@ -253,12 +253,14 @@ $cta_bg_img ? $cta_bg_img : '';
                             $position = get_post_meta(get_the_ID(), 'sb_postion', true);
                             $s_email = get_post_meta(get_the_ID(), 'sb_email', true);
 
+
                             ?>
+
 
                                 <div id="ui-team-panel-grid-item-cd4ca80fbe5cf071eee709e41ee18777"
                                      class="ui-team-panel-grid-item expander-trigger col-sm-3">
                                     <div class="ui-team-panel-image"
-                                         style="background-image:url('https://greatergood.org/wp-content/uploads/2016/09/lizbaker.jpg');"></div>
+                                         style="background-image:url('<?php has_post_thumbnail() ? the_post_thumbnail_url() : '' ?>');"></div>
 
                                     <div class="ui-team-panel-content">
                                         <h3 class="ui-team-panel-name"><?php the_title() ?></h3>
@@ -345,7 +347,7 @@ $cta_bg_img ? $cta_bg_img : '';
                                 <div id="ui-team-panel-grid-item-ab4ed6771a81df23cf47f8dfa01ba124"
                                      class="ui-team-panel-grid-item expander-trigger col-sm-3">
                                     <div class="ui-team-panel-image"
-                                         style="background-image:url('https://greatergood.org/wp-content/uploads/2016/09/davidyaskulka.jpg');"></div>
+                                         style="background-image:url('<?php has_post_thumbnail() ? the_post_thumbnail_url() : '' ?>');"></div>
 
                                     <div class="ui-team-panel-content">
                                         <h3 class="ui-team-panel-name"><?php the_title(); ?></h3>
