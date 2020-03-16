@@ -106,14 +106,6 @@ global $pureopt;
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjMT-A7aiQhWE36XCEoJZFO5T68RscAWQ"></script>
 <!-- Instagram Feed JS -->
 
-
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    //var sb_instagram_js_options = {"sb_instagram_at": "", "font_method": "svg"};
-    /* ]]> */
-</script>
-<script type='text/javascript' src='https://greatergood.org/wp-content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.12.2'></script>
-<script type='text/javascript' src='https://greatergood.org/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=3.1.2'></script>
 <?php wp_footer(); ?>
 </body>
 </html>
