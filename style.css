@@ -20,6 +20,19 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+h1, h2 {
+	font-family: 'Varela Round', sans-serif;
+}
+
+.illustration img {
+	width: 100%;
+	display: block;
+}
+
+
+
 .blog-cat {
 	margin: 0;
 	padding: 0;
@@ -308,6 +321,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: rgba(0,151,206,1);
 }
 
+
 @media (min-width: 768px){
 	.ui-banner.center .ui-banner-content-action-button a {
 		padding: 0 28px;
@@ -328,4 +342,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	figure.alignleft, img.alignleft, figure.alignright, img.alignright {
 		float:none;
 	}
+
+
 }
