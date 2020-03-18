@@ -118,5 +118,116 @@ function purebodyawareness_ctp(){
 
     register_post_type('meet-our-board', $args);
 
+    $labels = array(
+        'name'                  => 'Gifts for Pet',
+        'singular_name'         => 'Gifts for Pet',
+        'menu_name'             => 'Gifts for Pet',
+        'name_admin_bar'        => 'Gifts for Pet',
+        'all_items'             => 'All Pets',
+        'view_item'             =>'View Pet',
+        'add_new_item'          =>'Add New Pet',
+        'add_new'               =>'Add New',
+        'edit_item'             =>'Edit Pet',
+        'update_item'           =>'Update Pet',
+        'search_items'          =>'Search Pet',
+        'not_found'             =>'Not Found',
+        'not_found_in_trash'    =>'Not found in Trash',
+    );
+
+    $args = array(
+        'labels'           => $labels,
+        'show_ui'          => true,
+        'show_in_menu'     => true,
+        'capability_type'  => 'post',
+        'hierarchical'     => false,
+        'menu_postion'     =>26,
+        'menu_icon'        => 'dashicons-twitter',
+        'supports'         =>array('title', 'editor', 'thumbnail'),
+        'public'              => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'show_in_rest' => true,
+
+    );
+
+    register_post_type('gifts-for-pet', $args);
+
+    $labels = array(
+        'name'                  => 'Gifts for Humanitarian',
+        'singular_name'         => 'Gifts for Humanitarian',
+        'menu_name'             => 'Gifts for Humanitarian',
+        'name_admin_bar'        => 'Gifts for Humanitarian',
+        'all_items'             => 'All Humanitarians',
+        'view_item'             =>'View Humanitarian',
+        'add_new_item'          =>'Add New Humanitarian',
+        'add_new'               =>'Add New',
+        'edit_item'             =>'Edit Humanitarian',
+        'update_item'           =>'Update Humanitarian',
+        'search_items'          =>'Search Humanitarian',
+        'not_found'             =>'Not Found',
+        'not_found_in_trash'    =>'Not found in Trash',
+    );
+
+    $args = array(
+        'labels'           => $labels,
+        'show_ui'          => true,
+        'show_in_menu'     => true,
+        'capability_type'  => 'post',
+        'hierarchical'     => false,
+        'menu_postion'     =>26,
+        'menu_icon'        => 'dashicons-twitter',
+        'supports'         =>array('title', 'editor', 'thumbnail'),
+        'public'              => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'show_in_rest' => true,
+
+    );
+
+    register_post_type('gifts-for-humanitarian', $args);
+
+    $labels = array(
+        'name'                  => 'Gifts for Environmentalist',
+        'singular_name'         => 'Gifts for Environmentalist',
+        'menu_name'             => 'Gifts for Environmentalist',
+        'name_admin_bar'        => 'Gifts for Environmentalist',
+        'all_items'             => 'All Environmentalists',
+        'view_item'             =>'View Environmentalist',
+        'add_new_item'          =>'Add New Environmentalist',
+        'add_new'               =>'Add New',
+        'edit_item'             =>'Edit Environmentalist',
+        'update_item'           =>'Update Environmentalist',
+        'search_items'          =>'Search Environmentalist',
+        'not_found'             =>'Not Found',
+        'not_found_in_trash'    =>'Not found in Trash',
+    );
+
+    $args = array(
+        'labels'           => $labels,
+        'show_ui'          => true,
+        'show_in_menu'     => true,
+        'capability_type'  => 'post',
+        'hierarchical'     => false,
+        'menu_postion'     =>26,
+        'menu_icon'        => 'dashicons-twitter',
+        'supports'         =>array('title', 'editor', 'thumbnail'),
+        'public'              => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'show_in_rest' => true,
+
+    );
+
+    register_post_type('gifts-for-environmentalist', $args);
+
 }
 add_action('init', 'purebodyawareness_ctp');

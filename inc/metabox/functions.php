@@ -891,6 +891,43 @@ function donate_button() {
 add_action('cmb2_admin_init', 'donate_button');
 
 
+function gifts_button() {
+    $cmb_demo = new_cmb2_box(array(
+        'id' => 'gifts_button_section',
+        'title' => 'Gift Now',
+        'object_types' => array('gifts-for-pet', 'gifts-for-humanitarian', 'gifts-for-environmentalist'),
+        'priority' => 'high'
+    ));
+//    $cmb_demo->add_field(array(
+//        'id' => 'gift_section_title',
+//        'name' => 'Section Title',
+//        'type' => 'text'
+//    ));
+//    $cmb_demo->add_field(array(
+//        'name' => 'Section BG',
+//        'id' => 'section_bg',
+//        'type' => 'colorpicker',
+//        'default' => '#ffffff',
+//        'options' => array(
+//            'alpha' => true,
+//        ),
+//    ));
+
+    $cmb_demo->add_field(array(
+        'id' => 'gift_now',
+        'name' => 'Gift Now Title',
+        'type' => 'text'
+    ));
+
+    $cmb_demo->add_field(array(
+        'id' => 'gift_now_url',
+        'name' => 'Gift Now Url',
+        'type' => 'text_url'
+    ));
+}
+
+add_action('cmb2_admin_init', 'gifts_button');
+
 function About_US() {
     $cmb_demo = new_cmb2_box( array(
         'id'            => 'About_US',
@@ -955,18 +992,6 @@ function About_US() {
 }
 
 add_action( 'cmb2_admin_init', 'About_US' );
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //include 'customMeta.php';
