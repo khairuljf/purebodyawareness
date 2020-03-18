@@ -123,7 +123,7 @@ function banner_section()
         'id' => 'banner_section',
         'title' => esc_html__('Banner Section', 'cmb2'),
         'object_types' => array('page'), // Post type
-//        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/Front-page-template.php', 'page-template/partnerships.php', 'page-template/fundraise-for-ggo.php') ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/Front-page-template.php', 'page-template/partnerships.php', 'page-template/fundraise-for-ggo.php') ),
     ));
 
 
@@ -208,28 +208,6 @@ function pressReadMore()
 
 add_action('cmb2_admin_init', 'pressReadMore');
 
-function other_demo_section_for_copy()
-{
-
-    $cmb_demo = new_cmb2_box(array(
-        'id' => 'demo_section',
-        'title' => esc_html__('Demo Section for copy', 'cmb2'),
-        'object_types' => array('page'),
-        'priority' => 'high',
-
-    ));
-
-
-    $cmb_demo->add_field(array(
-        'name' => esc_html__('Demo Field', 'cmb2'),
-        'desc' => esc_html__('Please enter banner title (If available for this page)', 'cmb2'),
-        'id' => 'demo_field',
-        'type' => 'text',
-    ));
-
-}
-
-add_action('cmb2_admin_init', 'other_demo_section_for_copy');
 
 function page_cta()
 {
@@ -368,7 +346,8 @@ add_action('cmb2_admin_init', 'page_cta');
 function about_page_cta() {
     $cmb_demo = new_cmb2_box(array(
         'id' => 'aboutCta_section',
-        'title' => esc_html__('About US Second Call To Action', 'cmb2'),
+        'title' => esc_html__('About US top Call To Action', 'cmb2'),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php') ),
         'object_types' => array('page'),
         'priority' => 'high',
         'desc' => 'This call to action only show on About Us Page'
@@ -580,6 +559,7 @@ function interested_section()
         'id' => 'interested_section',
         'title' => 'Interested Section',
         'object_types' => array('page'),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/fundraise-for-ggo.php') ),
         'priority' => 'high'
     ));
 
@@ -616,6 +596,7 @@ function align_brand()
         'id' => 'align_brand_section',
         'title' => 'Align Brand Section',
         'object_types' => array('page'),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/fundraise-for-ggo.php') ),
         'priority' => 'high'
     ));
 
@@ -678,6 +659,7 @@ function partner_accordion()
     $cmb_demo = new_cmb2_box(array(
         'id' => 'partner_accordion_section',
         'title' => 'Partner Accordion Section',
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/partnerships.php') ),
         'object_types' => array('page'),
         'priority' => 'high'
     ));
@@ -792,6 +774,70 @@ function donate_button() {
 add_action('cmb2_admin_init', 'donate_button');
 
 
+function About_US() {
+    $cmb_demo = new_cmb2_box( array(
+        'id'            => 'About_US',
+        'title'         => esc_html__( 'About US Top Section', 'cmb2' ),
+        'object_types'  => array( 'page' ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php') ),
+        'priority'   => 'high',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => 'Section_image',
+        'desc'    => 'Upload an image or enter an URL.',
+        'id'      => 'about_top_img',
+        'type'    => 'file',
+        // Optional:
+        'options' => array(
+            'url' => false, // Hide the text input for the url
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Add File' // Change upload button text. Default: "Add or Upload File"
+        ),
+        // query_args are passed to wp.media's library query.
+        'query_args' => array(
+            'type' => array(
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'medium', // Image size to use when previewing in the admin.
+    ) );
+    $cmb_demo->add_field( array(
+        'name' => 'Section Title',
+        'desc' => 'Enter the title',
+        'type' => 'text',
+        'id'   => 'about_1st_title'
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => 'Section Content',
+        'desc'    => 'Content will goes Here',
+        'id'      => 'about_top_content',
+        'type'    => 'wysiwyg',
+        'options' => array(),
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'             => 'Button URL 1',
+        'desc'             => 'Enter page link',
+        'id'               => 'btnurl1',
+        'type'             => 'text',
+
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'             => 'Button URL 2',
+        'desc'             => 'Enter page link',
+        'id'               => 'btnurl2',
+        'type'             => 'text',
+
+    ) );
+
+}
+
+add_action( 'cmb2_admin_init', 'About_US' );
 
 
 
@@ -800,5 +846,11 @@ add_action('cmb2_admin_init', 'donate_button');
 
 
 
-include 'customMeta.php';
+
+
+
+
+
+
+//include 'customMeta.php';
 include 'customFieldForCTP.php';
