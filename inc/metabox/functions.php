@@ -123,7 +123,7 @@ function banner_section()
         'id' => 'banner_section',
         'title' => esc_html__('Banner Section', 'cmb2'),
         'object_types' => array('page'), // Post type
-        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/Front-page-template.php', 'page-template/partnerships.php', 'page-template/fundraise-for-ggo.php') ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/Front-page-template.php', 'page-template/partnerships.php', 'page-template/fundraise-for-ggo.php', 'page-template/page-two-columns.php') ),
     ));
 
 
@@ -184,6 +184,72 @@ function banner_section()
 
 add_action('cmb2_admin_init', 'banner_section');
 
+function banner_section_only_image(){
+    $cmb_demo = new_cmb2_box(array(
+        'id' => 'banner_section_only_img',
+        'title' => esc_html__('Banner Image Option', 'cmb2'),
+        'object_types' => array('page'), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => array( 'page-template/donate-to-ggo-template.php') ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Upload image', 'cmb2'),
+        'id' => 'only_banner_img',
+        'type' => 'file',
+        'desc' => 'Add image for banner'
+    ));
+
+}
+add_action('cmb2_admin_init', 'banner_section_only_image');
+
+function donate_page_footer(){
+    $cmb_demo = new_cmb2_box(array(
+        'id' => 'donate_page_field_footer',
+        'title' => esc_html__('Donate to go above footer', 'cmb2'),
+        'object_types' => array('page'), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => array( 'page-template/donate-to-ggo-template.php') ),
+    ));
+
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Donate footer above title', 'cmb2'),
+        'id' => 'donate_footer_title',
+        'type' => 'text',
+        'desc' => 'Enter Donate footer above title'
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Description', 'cmb2'),
+        'id' => 'donate_footer_title_desc',
+        'type' => 'text',
+        'desc' => 'Add Description'
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Button 1 Name', 'cmb2'),
+        'id' => 'donate_footer_btn1_name',
+        'type' => 'text',
+        'desc' => 'Button 1 Name'
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Button 1 URL', 'cmb2'),
+        'id' => 'donate_footer_btn1_url',
+        'type' => 'text',
+        'desc' => 'Button 1 URL'
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Button 2 Name', 'cmb2'),
+        'id' => 'donate_footer_btn2_name',
+        'type' => 'text',
+        'desc' => 'Button 2 Name'
+    ));
+    $cmb_demo->add_field(array(
+        'name' => esc_html__('Button 2 URL', 'cmb2'),
+        'id' => 'donate_footer_btn2_url',
+        'type' => 'text',
+        'desc' => 'Button 2 url'
+    ));
+}
+
+add_action('cmb2_admin_init', 'donate_page_footer');
+
 function pressReadMore()
 {
     /**
@@ -213,8 +279,9 @@ function page_cta()
 {
     $cmb_demo = new_cmb2_box(array(
         'id' => 'cta_section',
-        'title' => esc_html__('Call To Action - Footer Above', 'cmb2'),
+        'title' => esc_html__('Call To Action - Above Footer ', 'cmb2'),
         'object_types' => array('page'),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/fundraise-for-ggo.php') ),
         'priority' => 'high',
     ));
 
