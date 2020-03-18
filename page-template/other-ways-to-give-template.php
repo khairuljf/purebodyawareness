@@ -7,6 +7,17 @@
 
 get_header();
 
+$two_column_group = get_post_meta(get_the_ID(), 'other_way_group', true);
+
+// footer option
+
+$donate_footer_title = get_post_meta(get_the_ID(), 'donate_footer_title', true);
+$donate_footer_title_desc = get_post_meta(get_the_ID(), 'donate_footer_title_desc', true);
+$donate_footer_btn1_name = get_post_meta(get_the_ID(), 'donate_footer_btn1_name', true);
+$donate_footer_btn1_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', true);
+$donate_footer_btn2_name = get_post_meta(get_the_ID(), 'donate_footer_btn1_name', true);
+$donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', true);
+
 ?>
 <main role="main">
     <!-- section -->
@@ -32,7 +43,7 @@ get_header();
 
 
                                         <div class="ui-hero-slide-content-attachment-image">
-                                            <img src="https://greatergood.org/wp-content/uploads/2019/05/other-ways-to-give-icon-1.png"/>
+                                            <img src="<?php echo get_the_post_thumbnail_url() ?>"/>
                                         </div>
 
 
@@ -62,6 +73,30 @@ get_header();
 
                     <div class="ui-action-panel-content">
 
+                        <?php
+
+                        foreach ((array)$two_column_group as $key => $entry) :
+
+                            $title = $group_img = $desc = $btn_name = $btn_url = '';
+
+                            if (isset($entry['accordion_title'])) {
+                                $title = $entry['accordion_title'];
+                            }
+                            if (isset($entry['group_img'])) {
+                                $group_img = $entry['group_img'];
+                            }
+                            if (isset($entry['accordion_desc'])) {
+                                $desc = $entry['accordion_desc'];
+                            }
+
+                            if (isset($entry['btn_name'])) {
+                                $btn_name = $entry['btn_name'];
+                            }
+                            if (isset($entry['btn_url'])) {
+                                $btn_url = $entry['btn_url'];
+                            }
+
+                        ?>
                         <div class="ui-action-grid-item">
 
                             <div class="ui-action-grid-item-photo"
@@ -70,24 +105,18 @@ get_header();
                             <div class="ui-action-grid-item-info">
                                 <div class="row">
                                     <div class="col-sm-9">
-                                        <h2 class="ui-action-grid-item-header">
-                                            Round Up Your Purchases </h2>
+                                        <h2 class="ui-action-grid-item-header"><?php echo $title ?> </h2>
 
                                         <p class="ui-action-grid-item-paragraph">
-                                            Every transaction you make on a credit card will round-up the change to the
-                                            dollar to help people, pets, and the planet! Spend $4.50 on your cup of
-                                            coffee? You could be rounding up 50 cents to help those in need. Give back
-                                            with every purchase by setting up your account and connecting your bank
-                                            account to begin rounding up. </p>
+                                            <?php echo $desc ?> </p>
                                     </div>
 
                                     <div class="col-sm-3">
                                         <div class="ui-action-grid-item-action-buttons">
                                             <div class="ui-action-grid-item-action-button">
-                                                <a href="http://bit.ly/2P9EiuK"
+                                                <a href="<?php echo $btn_url ?>"
                                                    class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Sign Up Now</a>
+                                                   target="_blank"><?php echo $btn_name ?></a>
 
 
                                             </div>
@@ -98,177 +127,8 @@ get_header();
                             </div>
 
                         </div>
-                        <div class="ui-action-grid-item">
 
-                            <div class="ui-action-grid-item-photo"
-                                 style="background-image:url('https://greatergood.org/wp-content/uploads/2018/10/IMG_0508-copy-1-1500x887.jpg')"></div>
-
-                            <div class="ui-action-grid-item-info">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <h2 class="ui-action-grid-item-header">
-                                            Leave a Bequest </h2>
-
-                                        <p class="ui-action-grid-item-paragraph">
-                                            Include GGO in your final giving plans or trust. You can make a bequest of
-                                            any size and direct the gift to support a specific program. Or keep it
-                                            unrestricted to allow GGO to direct your gift to where it is most
-                                            needed. </p>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="ui-action-grid-item-action-buttons">
-                                            <div class="ui-action-grid-item-action-button">
-                                                <a href="https://greatergood.org/leaving-a-bequest/"
-                                                   class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Learn More</a>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="ui-action-grid-item">
-
-                            <div class="ui-action-grid-item-photo"
-                                 style="background-image:url('https://greatergood.org/wp-content/uploads/2018/10/L80A7744-e1539096207994-1500x798.jpg')"></div>
-
-                            <div class="ui-action-grid-item-info">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <h2 class="ui-action-grid-item-header">
-                                            Donate By Stock </h2>
-
-                                        <p class="ui-action-grid-item-paragraph">
-                                            Work with us and your broker to donate the value of your stock to support
-                                            our mission. Our donor engagement team will work directly with you to ensure
-                                            your charitable gift is used to support programs in the cause area you care
-                                            most about. </p>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="ui-action-grid-item-action-buttons">
-                                            <div class="ui-action-grid-item-action-button">
-                                                <a href="mailto:dafny@greatergood.org"
-                                                   class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Contact Us</a>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="ui-action-grid-item">
-
-                            <div class="ui-action-grid-item-photo"
-                                 style="background-image:url('https://greatergood.org/wp-content/uploads/2018/10/IMG_6355-e1539095288812.jpg')"></div>
-
-                            <div class="ui-action-grid-item-info">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <h2 class="ui-action-grid-item-header">
-                                            Donate a Special Event </h2>
-
-                                        <p class="ui-action-grid-item-paragraph">
-                                            Donate your birthday, wedding, anniversary, or another special day. Instead
-                                            of asking for gifts, have your guests donate to a cause you care deeply
-                                            about. We will work directly with you to create a custom fundraising page
-                                            for you. </p>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="ui-action-grid-item-action-buttons">
-                                            <div class="ui-action-grid-item-action-button">
-                                                <a href="mailto:dafny@greatergood.org"
-                                                   class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Contact Us</a>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="ui-action-grid-item">
-
-                            <div class="ui-action-grid-item-photo"
-                                 style="background-image:url('https://greatergood.org/wp-content/uploads/2018/10/NYF-Delivering-relief-supplies-in-Satya-Devi-VDC.jpg')"></div>
-
-                            <div class="ui-action-grid-item-info">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <h2 class="ui-action-grid-item-header">
-                                            Donate Product </h2>
-
-                                        <p class="ui-action-grid-item-paragraph">
-                                            Make an in-kind donation of product to help offset our program costs. From
-                                            food to medicine, we accept almost everything. </p>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="ui-action-grid-item-action-buttons">
-                                            <div class="ui-action-grid-item-action-button">
-                                                <a href="mailto:donate@greatergood.org"
-                                                   class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Contact Us</a>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="ui-action-grid-item">
-
-                            <div class="ui-action-grid-item-photo"
-                                 style="background-image:url('https://greatergood.org/wp-content/uploads/2019/02/AdobeStock_123637090-copy-e1549399716924-1500x836.jpeg')"></div>
-
-                            <div class="ui-action-grid-item-info">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <h2 class="ui-action-grid-item-header">
-                                            Donate Your Car </h2>
-
-                                        <p class="ui-action-grid-item-paragraph">
-                                            Have a vehicle you no longer need? You can donate the value of your car at
-                                            auction through Donate-a-Car. </p>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <div class="ui-action-grid-item-action-buttons">
-                                            <div class="ui-action-grid-item-action-button">
-                                                <a href="http://www.donateacar.com/charity/Greatergood/?template=affiliate"
-                                                   class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Learn More</a>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
+                        <?php endforeach; ?>
 
                     </div>
                 </div>
@@ -287,27 +147,26 @@ get_header();
                     <div class="ui-banner-content">
 
                         <div class="ui-banner-content-text">
-                            <h1 class="ui-banner-content-headline">Don't Forget to Donate and Fundraise</h1>
+                            <h1 class="ui-banner-content-headline"><?php echo $donate_footer_title ?></h1>
 
                             <p class="ui-banner-content-paragraph">
-                                Give towards our mission of helping people, pets, and the planet. <br/>Or, get your
-                                friends involved by starting a fundraiser! </p>
+                               <?php echo $donate_footer_title_desc ?> </p>
                         </div>
 
                         <div class="ui-banner-content-action-buttons">
                             <div class="ui-banner-content-action-button">
-                                <a href="https://greatergood.org/donate/"
+                                <a href="<?php echo $donate_footer_btn1_url ?>"
                                    class="ui-action-button solid fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
                                    target="_blank">
-                                    Donate</a>
+                                    <?php echo $donate_footer_btn1_name ?></a>
 
 
                             </div>
                             <div class="ui-banner-content-action-button">
-                                <a href="https://give.greatergood.org/campaign/ggo-p2p/c201705"
+                                <a href="<?php echo $donate_footer_btn2_url ?>"
                                    class="ui-action-button white-outline fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
                                    target="_blank">
-                                    Fundraise</a>
+                                    <?php echo $donate_footer_btn1_name ?></a>
 
 
                             </div>

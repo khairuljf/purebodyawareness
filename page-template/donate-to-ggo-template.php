@@ -37,7 +37,7 @@ $donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', 
                                     <div class="ui-hero-slide-content-attachment">
 
                                         <div class="ui-hero-slide-content-attachment-image">
-                                            <img src="<?php echo $only_banner_img ?>"/>
+                                            <img src="<?php echo get_the_post_thumbnail_url()?>"/>
                                         </div>
 
                                     </div>
@@ -97,6 +97,7 @@ $donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', 
             </div>
 
         </div>
+
 
     </section>
     <!-- /section -->

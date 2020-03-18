@@ -49,7 +49,7 @@ global $pureopt; ?>
 
                 </div>
             </div>
-            <div style="background-color: #ffffff" id="video-gallery_1147edca207ad6846a6875355ba33058"
+            <div style="background-color: #ffffff; display: none" id="video-gallery_1147edca207ad6846a6875355ba33058"
                  class="ui-video-gallery-component" data-hash="_1147edca207ad6846a6875355ba33058">
                 <div class="container">
                     <h2 class="ui-video-gallery-header"><font size="6">Videos</font></h2>
@@ -328,51 +328,7 @@ global $pureopt; ?>
                 </div>
             </div>
 
-            <div id="flex-component-3" class="ui-hero small" style="display: none">
 
-                <!-- SEEMS LIKE THIS IS THE STATIC VERSION OF THE HERO... -->
-
-                <div class="ui-hero-slides regular-version" data-speed="6000">
-                    <div class="ui-hero-slide  animated center"
-                         style="background-image:url('https://greatergood.org/wp-content/uploads/2018/01/Small-Hero-for-Logo-Landing-Page-No-Gaps-1500x600.jpg');z-index:1;">
-
-                        <div class="ui-hero-slide-overlay fx-main-color-background-color-07"></div>
-
-
-                        <div class="container">
-                            <div class="ui-hero-slide-container regular-version center">
-                                <div class="container">
-                                    <div class="ui-hero-slide-content">
-
-
-                                        <div class="ui-hero-slide-content-text">
-                                            <h1 class="ui-hero-slide-content-headline" style="color: #ffffff;">Download
-                                                GreaterGood.org Signature Program Logos</h1>
-
-                                        </div>
-
-
-                                        <div class="ui-hero-slide-content-action-buttons">
-                                            <div class="ui-hero-slide-content-action-button">
-                                                <a href="https://greatergood.org/home/logos-for-partners/"
-                                                   class="ui-action-button white-outline fx-highlight-1-color-background-color-10 fx-highlight-1-color-border-color"
-                                                   target="_blank">
-                                                    Download Logo Packs</a>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
 
             <?php get_template_part( './template-parts/call-to-action' ); ?>
 
