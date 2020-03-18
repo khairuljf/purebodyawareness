@@ -100,7 +100,7 @@ $donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', 
                         <div class="ui-action-grid-item">
 
                             <div class="ui-action-grid-item-photo"
-                                 style="background-image:url('https://greatergood.org/wp-content/uploads/2019/10/AdobeStock_127895254-change-1500x997.jpeg')"></div>
+                                 style="background-image:url('<?php echo $group_img ?>')"></div>
 
                             <div class="ui-action-grid-item-info">
                                 <div class="row">
