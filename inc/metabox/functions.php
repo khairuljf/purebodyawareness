@@ -895,34 +895,21 @@ add_action('cmb2_admin_init', 'donate_button');
 function gifts_button() {
     $cmb_demo = new_cmb2_box(array(
         'id' => 'gifts_button_section',
-        'title' => 'Gift Now',
-        'object_types' => array('gifts-for-pet', 'gifts-for-humanitarian', 'gifts-for-environmentalist'),
+        'title' => 'Gift Now Options',
+        'object_types' => array('gifts-for-pet', 'humanitarian', 'environmentalist'),
         'priority' => 'high'
     ));
-//    $cmb_demo->add_field(array(
-//        'id' => 'gift_section_title',
-//        'name' => 'Section Title',
-//        'type' => 'text'
-//    ));
-//    $cmb_demo->add_field(array(
-//        'name' => 'Section BG',
-//        'id' => 'section_bg',
-//        'type' => 'colorpicker',
-//        'default' => '#ffffff',
-//        'options' => array(
-//            'alpha' => true,
-//        ),
-//    ));
 
     $cmb_demo->add_field(array(
         'id' => 'gift_now',
-        'name' => 'Gift Now Title',
-        'type' => 'text'
+        'name' => 'Gift Now Button Name',
+        'type' => 'text',
+        'default' => 'GIVE NOW'
     ));
 
     $cmb_demo->add_field(array(
         'id' => 'gift_now_url',
-        'name' => 'Gift Now Url',
+        'name' => 'Gift Now Button URL',
         'type' => 'text_url'
     ));
 }
@@ -993,6 +980,115 @@ function About_US() {
 }
 
 add_action( 'cmb2_admin_init', 'About_US' );
+
+function catalog_img_content(){
+
+    $cmb_demo = new_cmb2_box( array(
+        'id'            => 'catelog_fields',
+        'title'         => esc_html__( 'Left Image & content Section', 'cmb2' ),
+        'object_types'  => array( 'page' ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/catalog.php') ),
+        'priority'   => 'high',
+    ) );
+    $cmb_demo->add_field(array(
+        'id' => 'left_img',
+        'name' => 'Upload image',
+        'type' => 'file'
+    ));
+    $cmb_demo->add_field(array(
+        'id' => 'section_title',
+        'name' => 'Enter Title',
+        'type' => 'text',
+        'default' => 'A Gift That Gives Back Month After Month'
+    ));
+
+    $cmb_demo->add_field(array(
+        'id' => 'section_desc',
+        'name' => 'Enter Title',
+        'type' => 'wysiwyg',
+        'options' => array(),
+    ));
+    $cmb_demo->add_field(array(
+        'id' => 'section_button',
+        'name' => 'Enter Button Name',
+        'type' => 'text',
+        'default' => 'JOIN THE CLUB'
+    ));
+
+    $cmb_demo->add_field(array(
+        'id' => 'section_button_URL',
+        'name' => 'Enter Button URL',
+        'type' => 'text',
+        'default' => '#'
+    ));
+
+}
+add_action( 'cmb2_admin_init', 'catalog_img_content' );
+function catalog_1st_call_action(){
+
+    $cmb_demo = new_cmb2_box( array(
+        'id'            => 'catelog_fields_call_to_action',
+        'title'         => esc_html__( 'First Call to action', 'cmb2' ),
+        'object_types'  => array( 'page' ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/catalog.php') ),
+        'priority'   => 'high',
+    ) );
+    $cmb_demo->add_field(array(
+        'id' => 'section_bg_1st',
+        'name' => 'Background Image',
+        'type' => 'file'
+    ));
+    $cmb_demo->add_field(array(
+        'id' => 'section_call_title',
+        'name' => 'Enter Title',
+        'type' => 'text',
+        'default' => '“It’s not how much we give, but how much love we put into giving.”'
+    ));
+
+
+    $cmb_demo->add_field(array(
+        'id' => 'section_cta_writer',
+        'name' => 'Writer',
+        'type' => 'text',
+        'default' => '—Mother Teresa'
+    ));
+
+
+}
+add_action( 'cmb2_admin_init', 'catalog_1st_call_action' );
+function catalog_2nd_call_action(){
+
+    $cmb_demo = new_cmb2_box( array(
+        'id'            => 'catelog_fields_call_to_action2',
+        'title'         => esc_html__( 'Second Call to action', 'cmb2' ),
+        'object_types'  => array( 'page' ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/catalog.php') ),
+        'priority'   => 'high',
+    ) );
+    $cmb_demo->add_field(array(
+        'id' => 'section_bg_2nd',
+        'name' => 'Background Image',
+        'type' => 'file'
+    ));
+    $cmb_demo->add_field(array(
+        'id' => 'section_call_title_2nd',
+        'name' => 'Enter Title',
+        'type' => 'text',
+        'default' => '“We make a living by what we get. We make a life by what we give.”'
+    ));
+
+
+    $cmb_demo->add_field(array(
+        'id' => 'section_cta_writer2',
+        'name' => 'Writer',
+        'type' => 'text',
+        'default' => '—Winston Churchill'
+    ));
+
+
+}
+add_action( 'cmb2_admin_init', 'catalog_2nd_call_action' );
+
 
 
 //include 'customMeta.php';

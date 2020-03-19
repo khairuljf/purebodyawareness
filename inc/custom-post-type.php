@@ -156,10 +156,10 @@ function purebodyawareness_ctp(){
     register_post_type('gifts-for-pet', $args);
 
     $labels = array(
-        'name'                  => 'Gifts for Humanitarian',
-        'singular_name'         => 'Gifts for Humanitarian',
-        'menu_name'             => 'Gifts for Humanitarian',
-        'name_admin_bar'        => 'Gifts for Humanitarian',
+        'name'                  => 'Humanitarian',
+        'singular_name'         => 'Humanitarian',
+        'menu_name'             => 'Humanitarian',
+        'name_admin_bar'        => 'Humanitarian',
         'all_items'             => 'All Humanitarians',
         'view_item'             =>'View Humanitarian',
         'add_new_item'          =>'Add New Humanitarian',
@@ -177,7 +177,7 @@ function purebodyawareness_ctp(){
         'show_in_menu'     => true,
         'capability_type'  => 'post',
         'hierarchical'     => false,
-        'menu_postion'     =>26,
+        'menu_postion'     =>27,
         'menu_icon'        => 'dashicons-twitter',
         'supports'         =>array('title', 'editor', 'thumbnail'),
         'public'              => true,
@@ -190,13 +190,13 @@ function purebodyawareness_ctp(){
 
     );
 
-    register_post_type('gifts-for-humanitarian', $args);
+    register_post_type('humanitarian', $args);
 
     $labels = array(
-        'name'                  => 'Gifts for Environmentalist',
-        'singular_name'         => 'Gifts for Environmentalist',
-        'menu_name'             => 'Gifts for Environmentalist',
-        'name_admin_bar'        => 'Gifts for Environmentalist',
+        'name'                  => 'Environmentalist',
+        'singular_name'         => 'Environmentalist',
+        'menu_name'             => 'Environmentalist',
+        'name_admin_bar'        => 'Environmentalist',
         'all_items'             => 'All Environmentalists',
         'view_item'             =>'View Environmentalist',
         'add_new_item'          =>'Add New Environmentalist',
@@ -214,7 +214,7 @@ function purebodyawareness_ctp(){
         'show_in_menu'     => true,
         'capability_type'  => 'post',
         'hierarchical'     => false,
-        'menu_postion'     =>26,
+        'menu_postion'     =>28,
         'menu_icon'        => 'dashicons-twitter',
         'supports'         =>array('title', 'editor', 'thumbnail'),
         'public'              => true,
@@ -227,7 +227,7 @@ function purebodyawareness_ctp(){
 
     );
 
-    register_post_type('gifts-for-environmentalist', $args);
+    register_post_type('environmentalist', $args);
 
 }
 add_action('init', 'purebodyawareness_ctp');
