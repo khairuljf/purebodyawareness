@@ -26,8 +26,7 @@ $cta_bg_img ? $cta_bg_img : '';
 ?>
 <?php
 if ($cta_active) { ?>
-    <div class="ui-banner center mh360 <?php if(!empty($isAddClass)) {echo $isAddClass;} ?>" style="background-image:url(<?php echo $cta_bg_img; ?>);">
-        <?php //var_dump($cta_overlay); wp_die(); ?>
+    <div class="ui-banner center mh360  <?php if(!empty($isAddClass)) {echo $isAddClass;} ?>" style="background-image:url(<?php echo $cta_bg_img; ?>);">
         <?php if($cta_show_overlay && $cta_overlay): ?>
         
         <div class="ui-banner-overlay fx-main-color-background-color-09" style="background-color: <?php echo $cta_overlay; ?>"></div>

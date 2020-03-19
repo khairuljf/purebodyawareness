@@ -10,8 +10,8 @@ $donate_footer_title = get_post_meta(get_the_ID(), 'donate_footer_title', true);
 $donate_footer_title_desc = get_post_meta(get_the_ID(), 'donate_footer_title_desc', true);
 $donate_footer_btn1_name = get_post_meta(get_the_ID(), 'donate_footer_btn1_name', true);
 $donate_footer_btn1_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', true);
-$donate_footer_btn2_name = get_post_meta(get_the_ID(), 'donate_footer_btn1_name', true);
-$donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', true);
+$donate_footer_btn2_name = get_post_meta(get_the_ID(), 'donate_footer_btn2_name', true);
+$donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn2_url', true);
 
 
 ?>

@@ -205,7 +205,7 @@ add_action('cmb2_admin_init', 'banner_section');
 function donate_page_footer(){
     $cmb_demo = new_cmb2_box(array(
         'id' => 'donate_page_field_footer',
-        'title' => esc_html__('Footer above option', 'cmb2'),
+        'title' => esc_html__('Footer above options', 'cmb2'),
         'object_types' => array('page'), // Post type
         'show_on' => array( 'key' => 'page-template', 'value' => array( 'page-template/donate-to-ggo-template.php', 'page-template/other-ways-to-give-template.php') ),
     ));
@@ -281,7 +281,7 @@ function page_cta()
         'id' => 'cta_section',
         'title' => esc_html__('Call To Action - Above Footer ', 'cmb2'),
         'object_types' => array('page'),
-        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/fundraise-for-ggo.php', 'page-template/page-press.php') ),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/fundraise-for-ggo.php', 'page-template/page-press.php', 'page-template/about-us-template.php') ),
         'priority' => 'high',
     ));
 
@@ -531,7 +531,8 @@ function two_column_section() {
     $cmb_demo = new_cmb2_box(array(
         'id' => 'two_column_page',
         'title' => esc_html__('Two Column Page Contents', 'cmb2'),
-        'object_types' => array('page')
+        'object_types' => array('page'),
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/about-us-template.php', 'page-template/page-two-columns.php','page-template/donate-to-ggo-template.php','page-template/fundraise-for-ggo.php','page-template/fundraise-for-ggo.php') ),
     ));
 
     $group_field_id = $cmb_demo->add_field(array(
