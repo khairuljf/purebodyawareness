@@ -985,7 +985,7 @@ function catalog_img_content(){
 
     $cmb_demo = new_cmb2_box( array(
         'id'            => 'catelog_fields',
-        'title'         => esc_html__( 'Left Image & content Section', 'cmb2' ),
+        'title'         => esc_html__( 'Left Image & Content Section', 'cmb2' ),
         'object_types'  => array( 'page' ),
         'show_on' => array( 'key' => 'page-template', 'value' => array('page-template/catalog.php') ),
         'priority'   => 'high',

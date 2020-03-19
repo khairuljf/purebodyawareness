@@ -7,6 +7,9 @@
 get_header();
 global $pureopt; ?>
     <main role="main">
+        <?php
+        while (have_posts()) :
+            the_post(); ?>
         <!-- section -->
         <section>
 
@@ -335,6 +338,7 @@ global $pureopt; ?>
 
         </section>
         <!-- /section -->
+        <?php endwhile; ?>
     </main>
 
 

@@ -43,6 +43,9 @@ global $pureopt;
 ?>
     <main role="main">
         <!-- section -->
+<?php
+while (have_posts()) :
+    the_post(); ?>
         <section>
 
             <div id="flex-component-0" class="ui-hero medium">
@@ -442,6 +445,7 @@ global $pureopt;
 
         </section>
         <!-- /section -->
+<?php endwhile; ?>
     </main>
 
 

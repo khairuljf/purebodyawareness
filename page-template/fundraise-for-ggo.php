@@ -13,6 +13,9 @@ $i = 1;
 ?>
 
     <main role="main">
+        <?php
+        while (have_posts()) :
+            the_post(); ?>
         <section>
             <div id="flex-component-0" class="ui-hero small">
 
@@ -149,6 +152,7 @@ $i = 1;
 
             </div>
         </section>
+        <?php endwhile; ?>
     </main>
 
 

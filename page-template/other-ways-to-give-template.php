@@ -21,6 +21,9 @@ $donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', 
 ?>
 <main role="main">
     <!-- section -->
+    <?php
+    while (have_posts()) :
+    the_post(); ?>
     <section>
 
         <div id="flex-component-0" class="ui-hero small">
@@ -180,6 +183,7 @@ $donate_footer_btn2_url = get_post_meta(get_the_ID(), 'donate_footer_btn1_url', 
         </div>
 
     </section>
+    <?php endwhile; ?>
     <!-- /section -->
 </main>
 
