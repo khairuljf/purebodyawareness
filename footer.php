@@ -77,18 +77,12 @@ global $pureopt;
 
         <section class="foot-3 col-sm-3">
             <h4>Contact Us</h4>
-            <form id="ajax-contact" method="post" action="/mailer.php">
-                <input type="text" id="name" name="name" placeholder="name" required><br>
-                <input type="email" id="email" name="email" placeholder="email" required><br>
-                <textarea id="message" name="message" placeholder="message" required></textarea><br>
-                <input type="submit" value="Send">
-            </form>
-            <div id="form-messages"></div>
+            <?php echo do_shortcode($pureopt['contact-shortcode']) ?>
         </section>
 
     </div>
 
-    <div class="foot-4-border-bleed"><p>Copyright © 2020 | <a href="https://greatergood.org/privacy"
+    <div class="foot-4-border-bleed"><p><?php echo $pureopt['copyright-text'] ?>| <a href="<?php echo esc_url(get_page_link($pureopt['privacy-link'])); ?>"
                                                               class="privacy-link">Privacy</a></p></div>
     <div class="container foot-container">
         <section class="foot-4 col-sm-12">

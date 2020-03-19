@@ -354,9 +354,17 @@
             ),
             array(
                 'id'       => 'privacy-link',
+                'type'     => 'select',
+                'title'    => __( 'Select Privacy Page', 'redux-framework-demo' ),
+                'default'  => '#',
+                'data' => 'page'
+            ),
+            array(
+                'id'       => 'contact-shortcode',
                 'type'     => 'text',
-                'title'    => __( 'Privacy Link', 'redux-framework-demo' ),
-                'default'  => '#'
+                'title'    => __( 'Enter the Form shortcode', 'redux-framework-demo' ),
+                'desc'  => 'Shortcode look like ( [ shortcode ] )',
+
             ),
 
         )
