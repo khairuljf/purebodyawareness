@@ -5,25 +5,25 @@
 
 get_header();
 
-$gift_now     = get_post_meta(get_the_ID(), 'gift_now', true);
+$gift_now = get_post_meta(get_the_ID(), 'gift_now', true);
 $gift_now_url = get_post_meta(get_the_ID(), 'gift_now_url', true);
 
 // Image & content section
-$left_img = get_post_meta(get_the_ID(),'left_img', true);
-$section_title = get_post_meta(get_the_ID(),'section_title', true);
-$section_desc = get_post_meta(get_the_ID(),'section_desc', true);
-$section_button = get_post_meta(get_the_ID(),'section_button', true);
-$section_button_URL = get_post_meta(get_the_ID(),'section_button_URL', true);
+$left_img = get_post_meta(get_the_ID(), 'left_img', true);
+$section_title = get_post_meta(get_the_ID(), 'section_title', true);
+$section_desc = get_post_meta(get_the_ID(), 'section_desc', true);
+$section_button = get_post_meta(get_the_ID(), 'section_button', true);
+$section_button_URL = get_post_meta(get_the_ID(), 'section_button_URL', true);
 
 // cta
-$section_bg_1st = get_post_meta(get_the_ID(),'section_bg_1st', true);
-$section_call_title = get_post_meta(get_the_ID(),'section_call_title', true);
-$section_cta_writer = get_post_meta(get_the_ID(),'section_cta_writer', true);
+$section_bg_1st = get_post_meta(get_the_ID(), 'section_bg_1st', true);
+$section_call_title = get_post_meta(get_the_ID(), 'section_call_title', true);
+$section_cta_writer = get_post_meta(get_the_ID(), 'section_cta_writer', true);
 
 // cta2
-$section_bg_2nd = get_post_meta(get_the_ID(),'section_bg_2nd', true);
-$section_call_title_2nd = get_post_meta(get_the_ID(),'section_call_title_2nd', true);
-$section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
+$section_bg_2nd = get_post_meta(get_the_ID(), 'section_bg_2nd', true);
+$section_call_title_2nd = get_post_meta(get_the_ID(), 'section_call_title_2nd', true);
+$section_cta_writer2 = get_post_meta(get_the_ID(), 'section_cta_writer2', true);
 
 ?>
     <main role="main">
@@ -139,24 +139,24 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
 
                             <div class="flexible-grid-cta-section clearfix">
                                 <div class="flexible-grid-all-ctas centered">
-                                <?php
+                                    <?php
 
-                                $args = array(
-                                    'post_type' => 'gifts-for-pet',
-                                    'post_status' => 'publish',
-                                    'posts_per_page' => -1,
-                                    'orderby' => 'title',
-                                    'order' => 'ASC'
-                                );
+                                    $args = array(
+                                        'post_type' => 'gifts-for-pet',
+                                        'post_status' => 'publish',
+                                        'posts_per_page' => -1,
+                                        'orderby' => 'title',
+                                        'order' => 'ASC'
+                                    );
 
-                                $pressLoop = new WP_Query($args);
+                                    $pressLoop = new WP_Query($args);
 
-                                while ($pressLoop->have_posts()) : $pressLoop->the_post();
+                                    while ($pressLoop->have_posts()) : $pressLoop->the_post();
 
-                                $button_name = get_post_meta(get_the_ID(),'gift_now', true);
-                                $button_url = get_post_meta(get_the_ID(),'gift_now_url', true);
+                                        $button_name = get_post_meta(get_the_ID(), 'gift_now', true);
+                                        $button_url = get_post_meta(get_the_ID(), 'gift_now_url', true);
 
-                                    ?>
+                                        ?>
 
 
                                         <div class="flexible-grid-item-wrapper image-wrapper"
@@ -169,19 +169,19 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
                                                    style="color: #000;"><?php echo the_title(); ?></p>
                                                 <p class="flexible-grid-item-text"
                                                    style="color: #000;"><?php echo the_content(); ?></p>
-                                                <a href="<?php echo $button_url; ?>" class="ui-action-button flexible-grid-item-button"
+                                                <a href="<?php echo $button_url; ?>"
+                                                   class="ui-action-button flexible-grid-item-button"
 
                                                    style="background-color: #ffb000; color: #000"><?php echo $button_name; ?></a>
                                             </div>
                                         </div>
 
 
-
-                                <?php
-                                endwhile;
-                                wp_reset_postdata();
-                                ?>
-                                    </div>
+                                    <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
+                                </div>
                             </div>
 
 
@@ -189,7 +189,7 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
                     </div>
                 </div>
                 <div class="ui-banner center"
-                     style="background-image:url('<?php echo $section_bg_1st  ?>');">
+                     style="background-image:url('<?php echo $section_bg_1st ?>');">
 
                     <div class="ui-banner-overlay fx-black-color-background-color-05"></div>
 
@@ -227,44 +227,47 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
 
                                 <div class="flexible-grid-all-ctas centered">
 
-            <?php
+                                    <?php
 
-            $args = array(
-                'post_type' => 'humanitarian',
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-                'orderby' => 'title',
-                'order' => 'ASC'
-            );
+                                    $args = array(
+                                        'post_type' => 'humanitarian',
+                                        'post_status' => 'publish',
+                                        'posts_per_page' => -1,
+                                        'orderby' => 'title',
+                                        'order' => 'ASC'
+                                    );
 
-            $pressLoop = new WP_Query($args);
+                                    $pressLoop = new WP_Query($args);
 
-            while ($pressLoop->have_posts()) : $pressLoop->the_post();
+                                    while ($pressLoop->have_posts()) : $pressLoop->the_post();
 
-                $button_name = get_post_meta(get_the_ID(),'gift_now', true);
-                $button_url = get_post_meta(get_the_ID(),'gift_now_url', true);
+                                        $button_name = get_post_meta(get_the_ID(), 'gift_now', true);
+                                        $button_url = get_post_meta(get_the_ID(), 'gift_now_url', true);
 
-                ?>
+                                        ?>
 
 
-                                    <div class="flexible-grid-item-wrapper image-wrapper"
-                                         style="background-color: #dd3333">
-                                        <div class="flexible-grid-item-image regular-image"
-                                             style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+                                        <div class="flexible-grid-item-wrapper image-wrapper"
+                                             style="background-color: #dd3333">
+                                            <div class="flexible-grid-item-image regular-image"
+                                                 style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+                                            </div>
+                                            <div class="flexible-grid-item-inner regular-inner">
+                                                <p class="flexible-grid-item-text title-text"
+                                                   style="color: #000;"><?php the_title() ?></p>
+                                                <p class="flexible-grid-item-text"
+                                                   style="color: #000;"><?php the_content(); ?></p>
+                                                <a href="<?php echo $button_url ?>"
+                                                   class="ui-action-button flexible-grid-item-button"
+                                                   data-product="2019256336"
+                                                   style="background-color: #ffb000; color: #000"><?php echo $button_name ?></a>
+                                            </div>
                                         </div>
-                                        <div class="flexible-grid-item-inner regular-inner">
-                                            <p class="flexible-grid-item-text title-text" style="color: #000;"><?php the_title() ?></p>
-                                            <p class="flexible-grid-item-text" style="color: #000;"><?php the_content(); ?></p>
-                                            <a href="<?php echo $button_url ?>"
-                                               class="ui-action-button flexible-grid-item-button"
-                                               data-product="2019256336" style="background-color: #ffb000; color: #000"><?php echo $button_name ?></a>
-                                        </div>
-                                    </div>
 
-            <?php
-            endwhile;
-            wp_reset_postdata();
-            ?>
+                                    <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
 
 
                                 </div>
@@ -301,7 +304,7 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
 
                 </div>
                 <!-- This is where the front end gets rendered and stuff... -->
-                <div class="ui-flexible-grid-tool">
+                <div class="ui-flexible-grid-tool" style="min-height: unset !important;">
                     <div
                             class="flexible-grid-tool-background" style="background-color: #a0d67a;">
 
@@ -314,44 +317,46 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
 
                                 <div class="flexible-grid-all-ctas left">
 
-            <?php
+                                    <?php
 
-            $args = array(
-                'post_type' => 'environmentalist',
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-                'orderby' => 'title',
-                'order' => 'ASC'
-            );
+                                    $args = array(
+                                        'post_type' => 'environmentalist',
+                                        'post_status' => 'publish',
+                                        'posts_per_page' => -1,
+                                        'orderby' => 'title',
+                                        'order' => 'ASC'
+                                    );
 
-            $pressLoop = new WP_Query($args);
+                                    $pressLoop = new WP_Query($args);
 
-            while ($pressLoop->have_posts()) : $pressLoop->the_post();
+                                    while ($pressLoop->have_posts()) : $pressLoop->the_post();
 
-                $button_name = get_post_meta(get_the_ID(),'gift_now', true);
-                $button_url = get_post_meta(get_the_ID(),'gift_now_url', true);
+                                        $button_name = get_post_meta(get_the_ID(), 'gift_now', true);
+                                        $button_url = get_post_meta(get_the_ID(), 'gift_now_url', true);
 
-                ?>
+                                        ?>
 
-                                    <div class="flexible-grid-item-wrapper image-wrapper"
-                                         style="background-color: #35ad43">
-                                        <div class="flexible-grid-item-image regular-image"
-                                             style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+                                        <div class="flexible-grid-item-wrapper image-wrapper"
+                                             style="background-color: #35ad43">
+                                            <div class="flexible-grid-item-image regular-image"
+                                                 style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+                                            </div>
+                                            <div class="flexible-grid-item-inner regular-inner">
+                                                <p class="flexible-grid-item-text title-text"
+                                                   style="color: #000;"><?php the_title() ?></p>
+                                                <p class="flexible-grid-item-text"
+                                                   style="color: #000;"><?php the_content(); ?></p>
+                                                <a href="<?php echo $button_url ?>"
+                                                   class="ui-action-button flexible-grid-item-button"
+                                                   data-product="2019256336"
+                                                   style="background-color: #ffb000; color: #000"><?php echo $button_name ?></a>
+                                            </div>
                                         </div>
-                                        <div class="flexible-grid-item-inner regular-inner">
-                                            <p class="flexible-grid-item-text title-text" style="color: #000;"><?php the_title() ?></p>
-                                            <p class="flexible-grid-item-text" style="color: #000;"><?php the_content(); ?></p>
-                                            <a href="<?php echo $button_url ?>"
-                                               class="ui-action-button flexible-grid-item-button"
-                                               data-product="2019256336" style="background-color: #ffb000; color: #000"><?php echo $button_name ?></a>
-                                        </div>
-                                    </div>
 
-            <?php
-            endwhile;
-            wp_reset_postdata();
-            ?>
-
+                                    <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
 
 
                                 </div>
@@ -369,8 +374,6 @@ $section_cta_writer2 = get_post_meta(get_the_ID(),'section_cta_writer2', true);
 
 
         endwhile; // End of the loop.
-        ?>
-
         ?>
 
 
